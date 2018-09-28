@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!--Login-->
+  <color name="background_Color">#E91402</color>
+
+  <color name="login_username_color">#575D66</color>
+  <color name="login_password_color">#575D66</color>
+
+  <color name="labeltext_Color">#596370</color>
+
+  <color name="ColorPrimary">#2196F3</color>
+  <color name="ColorPrimaryDark">#1976D2</color>
+  <color name="accent">#E040FB</color>
+
+  <!--Menu Drawer-->
+
+
+  <color name="menudrawer_sidemenu_name_background">#FFFFFF</color>
+
+  <color name="menu_drawer_background">#867B6D</color>
+
+  <color name="menu_drawer_margin_line">#F1F2F6</color>
+
+  <color name="menu_drawer_textcolor">#FFFFFF</color>
+
+  <!--Menu Drawer-->
+
+  <color name="actionbarbackground">#E91402</color>
+</resources>

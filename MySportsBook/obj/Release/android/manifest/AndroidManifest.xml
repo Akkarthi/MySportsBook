@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MySportsBook.MySportsBook" android:versionCode="1" android:versionName="1.1" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="21" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="MySportsBook" android:name="android.app.Application" android:allowBackup="true">
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.BatchesActivity" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.CourtActivity" />
+    <activity android:label="My SportsBook" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.LoginActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.BatchPlayer" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.SportActivity" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.VenueActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="MySportsBook.MySportsBook.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>
