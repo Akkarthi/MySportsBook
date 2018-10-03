@@ -13,6 +13,7 @@ using Android.Support.V4.Widget;
 using Android.Support.V4.App;
 using Android.Graphics.Drawables;
 using Android.Graphics;
+
 using Newtonsoft.Json;
 
 namespace MySportsBook
@@ -35,7 +36,10 @@ namespace MySportsBook
         private TextView txtAttendanceMenu;
         CommonDetails commonDetails=new CommonDetails();
         Helper helper=new Helper();
-
+        private RelativeLayout rrLeftMenuBatchContainer;
+        private TextView txtBatchMenu;
+        private RelativeLayout rrLeftMenuEnquiryContainer;
+        private TextView txtEnquiryMenu;
         #endregion
 
         #region "Abstract Methods"
@@ -141,6 +145,8 @@ namespace MySportsBook
             txtActionBarVenueCode.SetTypeface(face, TypefaceStyle.Normal);
             txtActionBarAppName.SetTypeface(face, TypefaceStyle.Normal);
             txtAttendanceMenu.SetTypeface(face, TypefaceStyle.Normal);
+            txtBatchMenu.SetTypeface(face, TypefaceStyle.Normal);
+            txtEnquiryMenu.SetTypeface(face, TypefaceStyle.Normal);
 
         }
         #endregion
@@ -188,6 +194,8 @@ namespace MySportsBook
             };
 
 
+
+
             txtLogOut = (TextView)FindViewById(Resource.Id.txtLogOut);
             txtLogOut.Click += delegate
             {
@@ -198,7 +206,13 @@ namespace MySportsBook
             txtAttendanceMenu = (TextView)FindViewById(Resource.Id.txtAttendanceMenu);
             rrLeftMenuAttendanceContainer.Click += delegate { Attendance(); };
 
+            rrLeftMenuBatchContainer = (RelativeLayout)FindViewById(Resource.Id.rrLeftMenuBatchContainer);
+            txtBatchMenu= (TextView)FindViewById(Resource.Id.txtBatchMenu);
+            rrLeftMenuBatchContainer.Click += delegate { LoadBatches(); };
 
+            rrLeftMenuEnquiryContainer = (RelativeLayout)FindViewById(Resource.Id.rrLeftMenuEnquiryContainer);
+            txtEnquiryMenu = (TextView)FindViewById(Resource.Id.txtEnquiryMenu);
+            rrLeftMenuEnquiryContainer.Click += delegate { LoadEnquiry(); };
 
         }
         #endregion
@@ -231,10 +245,51 @@ namespace MySportsBook
             StartActivity(intent);
         }
 
+        public void LoadEnquiry()
+        {
+            commonDetails = GetDetails();
+            commonDetails.isAttendance = false;
+            Intent intent = new Intent(this, typeof(EnquiryFormActivity));
+            intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+            //close all the other intent
+            StartActivity(intent);
+        }
+
         public void Attendance()
         {
             commonDetails = GetDetails();
             commonDetails.isAttendance = true;
+            if (helper.CheckInternetConnection(this))
+            {
+                try
+                {
+                    //CheckLandingPage(commonDetails);
+                    Intent intent = new Intent(this, typeof(SportActivity));
+                    intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+                    //close all the other intent
+                    StartActivity(intent);
+                }
+                catch (Exception e)
+                {
+                    helper.AlertPopUp("Error", "Unable to retrive data the server", this);
+                }
+            }
+            else
+            {
+                helper.AlertPopUp("Warning", "Please enable mobile data", this);
+            }
+
+            //commonDetails = GetDetails();
+            //Intent intent = new Intent(this, typeof(SportActivity));
+            //intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+            ////close all the other intent
+            //StartActivity(intent);
+        }
+
+        public void LoadBatches()
+        {
+            commonDetails = GetDetails();
+            commonDetails.isAttendance = false;
             if (helper.CheckInternetConnection(this))
             {
                 try

@@ -177,10 +177,41 @@ namespace MySportsBook
             }
         }
 
-        public List<Player> GetPlayer(string token, string venueId, string sportId, string courtId,string batchId,string playerId,string date)
+        public List<Player> GetPlayer(string token, string venueId, string sportId, string courtId,string batchId)
         {
             List<Player> playerList = new List<Player>();
-            string url = urlAddress + "api/player/" + venueId + "/" + sportId + "/" + courtId + "/" + batchId + "/" +
+            string url = urlAddress + "api/player/" + venueId + "/" + sportId + "/" + courtId + "/" + batchId;
+                        
+            try
+            {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+                using (var client = new HttpClient())
+                {
+                    if (!string.IsNullOrWhiteSpace(token))
+                    {
+                        client.DefaultRequestHeaders.Clear();
+                        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    }
+                    var response = client.GetAsync(url).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (result != null)
+                    {
+                        playerList = JsonConvert.DeserializeObject<List<Player>>(result);
+                    }
+                }
+
+                return playerList;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public List<Player> GetPlayerForAttendance(string token, string venueId, string sportId, string courtId, string batchId, string playerId, string date)
+        {
+            List<Player> playerList = new List<Player>();
+            string url = urlAddress + "api/attendance/" + venueId + "/" + sportId + "/" + courtId + "/" + batchId + "/" +
                          playerId + "/" + date;
             try
             {
@@ -248,6 +279,36 @@ namespace MySportsBook
             {
                 responseResult= false;
                 return responseResult;
+            }
+        }
+
+        public List<Games> GetGames(string token, string venueId, string sportId)
+        {
+            List<Games> gameList = new List<Games>();
+            string url = urlAddress + "api/sport/" + venueId;
+            try
+            {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+                using (var client = new HttpClient())
+                {
+                    if (!string.IsNullOrWhiteSpace(token))
+                    {
+                        client.DefaultRequestHeaders.Clear();
+                        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    }
+                    var response = client.GetAsync(url).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (result != null)
+                    {
+                        gameList = JsonConvert.DeserializeObject<List<Games>>(result);
+                    }
+                }
+
+                return gameList;
+            }
+            catch (Exception e)
+            {
+                return null;
             }
         }
     }

@@ -109,9 +109,16 @@ namespace MySportsBook
                 {
                     ServiceHelper serviceHelper = new ServiceHelper();
 
-
-                    playerList = serviceHelper.GetPlayer(details.access_token, details.VenueId, details.SportId,
-                        details.CourtId, details.BatchId,"0", selecteDateTime.ToString("MM-dd-yyyy"));
+                    if (details.isAttendance)
+                    {
+                        playerList = serviceHelper.GetPlayerForAttendance(details.access_token, details.VenueId, details.SportId,
+                            details.CourtId, details.BatchId, "0", selecteDateTime.ToString("MM-dd-yyyy"));
+                    }
+                    else
+                    {
+                        playerList = serviceHelper.GetPlayer(details.access_token, details.VenueId, details.SportId,
+                            details.CourtId, details.BatchId);
+                    }
 
                     batchPlayer_ItemAdapter =
                         new BatchPlayer_ItemAdapter(this, playerList, linearProgressBar, details.isAttendance);

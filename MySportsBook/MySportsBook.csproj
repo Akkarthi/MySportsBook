@@ -77,12 +77,17 @@
     <Compile Include="Common\ServiceHelper.cs" />
     <Compile Include="Court\CourtActivity.cs" />
     <Compile Include="Court\Court_ItemAdapter.cs" />
+    <Compile Include="Enquiry\EnquiryFormActivity.cs" />
+    <Compile Include="Enquiry\EnquiryUserActivity.cs" />
+    <Compile Include="Enquiry\EnquiryUser_ItemAdapter.cs" />
     <Compile Include="Entity\Attendance.cs" />
     <Compile Include="Entity\Batch.cs" />
     <Compile Include="Entity\BatchCountModel.cs" />
     <Compile Include="Entity\BatchList.cs" />
     <Compile Include="Entity\CommonDetails.cs" />
     <Compile Include="Entity\Court.cs" />
+    <Compile Include="Entity\EnquiryUser.cs" />
+    <Compile Include="Entity\Games.cs" />
     <Compile Include="Entity\Login.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Entity\Root.cs" />
@@ -149,6 +154,18 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\datepicker_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EnquiryForm.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EnquiryUser.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\enquiryuser_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EnquiryUserDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -542,6 +559,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ButtonStyle.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

@@ -20,28 +20,56 @@
             android:textColor="#FFFFFF"
             android:gravity="left" />
     </RelativeLayout>
-  <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/rrLeftMenuAttendanceContainer"
-    android:layout_margin="@dimen/_10sdp"
-   >
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/txtAttendanceMenu"
-      android:text="Attendance"
-      android:textSize="@dimen/_20sdp"
-      android:textColor="#FFFFFF"
-      android:gravity="left" />
-  </RelativeLayout>
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rrLeftMenuBatchContainer"
+        android:layout_margin="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBatchMenu"
+            android:text="Batches"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="#FFFFFF"
+            android:gravity="left" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rrLeftMenuAttendanceContainer"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/rrLeftMenuBatchContainer">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAttendanceMenu"
+            android:text="Attendance"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="#FFFFFF"
+            android:gravity="left" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rrLeftMenuEnquiryContainer"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/rrLeftMenuAttendanceContainer">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEnquiryMenu"
+            android:text="Enquiry"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="#FFFFFF"
+            android:gravity="left" />
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rrLeftMenuLogOutContainer"
         android:layout_margin="@dimen/_10sdp"
-        android:layout_below="@+id/rrLeftMenuAttendanceContainer">
+        android:layout_below="@+id/rrLeftMenuEnquiryContainer">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

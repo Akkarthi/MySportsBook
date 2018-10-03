@@ -157,3 +157,4 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\chec
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\unchecked.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\datepicker_dialog.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable\buttonstyle.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryform.xml

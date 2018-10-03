@@ -56,28 +56,27 @@
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
-   
-  <RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/rlBatchPlayerRightImage"
-    android:gravity="right"
-    android:layout_centerVertical="true"
-    android:visibility="gone">
-    <ImageView
-      android:id="@+id/imgPlayerUnchecked"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/unchecked"
-      android:layout_alignParentRight="true" 
-      android:layout_marginTop="@dimen/_5sdp"/>
-    <ImageView
-      android:id="@+id/imgPlayerchecked"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/checked"
-      android:layout_alignParentRight="true" 
-      android:visibility="gone"
-      android:layout_marginTop="@dimen/_5sdp"/>
-  </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlBatchPlayerRightImage"
+        android:gravity="right"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgPlayerUnchecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/unchecked"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp" />
+        <ImageView
+            android:id="@+id/imgPlayerchecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checked"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp" />
+    </RelativeLayout>
 </RelativeLayout>
