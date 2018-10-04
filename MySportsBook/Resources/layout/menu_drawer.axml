@@ -64,12 +64,27 @@
             android:textColor="#FFFFFF"
             android:gravity="left" />
     </RelativeLayout>
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rrLeftMenuEnquiryUserContainer"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_below="@+id/rrLeftMenuEnquiryContainer">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtEnquiryUserMenu"
+      android:text="Enquiry Users"
+      android:textSize="@dimen/_20sdp"
+      android:textColor="#FFFFFF"
+      android:gravity="left" />
+  </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rrLeftMenuLogOutContainer"
         android:layout_margin="@dimen/_10sdp"
-        android:layout_below="@+id/rrLeftMenuEnquiryContainer">
+        android:layout_below="@+id/rrLeftMenuEnquiryUserContainer">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

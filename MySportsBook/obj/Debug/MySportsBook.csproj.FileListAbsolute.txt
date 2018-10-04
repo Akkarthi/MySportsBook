@@ -5,6 +5,7 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\MySportsBook.MySportsBook
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\Newtonsoft.Json.dll
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\Xamarin.Android.Support.v4.dll
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\Newtonsoft.Json.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\MySportsBook.csprojResolveAssemblyReference.cache
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\MySportsBook.dll
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\MySportsBook.pdb
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\android\bin\MySportsBook.MySportsBook.apk
@@ -24,6 +25,11 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\batchplayer_it
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\sports.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\sport_item.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\progressbar.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\datepicker_dialog.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryform.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryuser.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryuser_item.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryuserdetail.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\main.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\values\strings.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable\icon.png
@@ -135,11 +141,6 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxhdpi\locat
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxhdpi\menu.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\location.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\menu.png
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\R.cs.flag
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\uploadflags.txt
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\MySportsBook.csprojResolveAssemblyReference.cache
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\MySportsBook.dll.mdb
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\android\assets\MySportsBook.dll.mdb
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-hdpi\venue.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-mdpi\venue.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xhdpi\venue.png
@@ -155,6 +156,8 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxhdpi\check
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxhdpi\unchecked.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\checked.png
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\unchecked.png
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\datepicker_dialog.xml
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable\buttonstyle.xml
-D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryform.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\R.cs.flag
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\uploadflags.txt
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\MySportsBook.dll.mdb
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\android\assets\MySportsBook.dll.mdb

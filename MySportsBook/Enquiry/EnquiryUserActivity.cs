@@ -14,9 +14,9 @@ using Android.Graphics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MySportsBook.Enquiry
+namespace MySportsBook
 {
-    [Activity(Label = "EnquiryUserActivity")]
+    [Activity(Label = "")]
     public class EnquiryUserActivity : MenuActivity
     {
         ListView enquiryUserListView;
@@ -32,7 +32,7 @@ namespace MySportsBook.Enquiry
 
             commonDetails = JsonConvert.DeserializeObject<CommonDetails>(Intent.GetStringExtra("details"));
 
-            enquiryUserListView = FindViewById<ListView>(Resource.Id.lstCourt);
+            enquiryUserListView = FindViewById<ListView>(Resource.Id.lstEnquiryUser);
             lblHeader = FindViewById<TextView>(Resource.Id.lblheader);
             linearProgressBar = FindViewById<LinearLayout>(Resource.Id.linearProgressBar);
 
@@ -59,7 +59,12 @@ namespace MySportsBook.Enquiry
                     //courtList = serviceHelper.GetCourt(details.access_token, details.VenueId, details.SportId);
 
 
+                    EnquiryUser enquiryUser;
 
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "karthi";
+                    enquiryUser.Mobile = "803894092840";
+                    enquiryUserList.Add(enquiryUser);
 
 
                     //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;

@@ -69,6 +69,9 @@ namespace MySportsBook
             btnSubmit.SetAllCaps(false);
             btnCancel.SetAllCaps(false);
 
+            btnSubmit.Click += btnSubmit_Click;
+            btnCancel.Click += btnCancel_Click;
+
 
             linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
 
@@ -101,20 +104,16 @@ namespace MySportsBook
                         foreach (var name in gameList)
                         {
                             sportNameList.Add(name.SportName);
-                            
+
                         }
 
                         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                             Android.Resource.Layout.SimpleSpinnerDropDownItem, sportNameList);
                         dataAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
                         spinnerEnquiryGame.Adapter = dataAdapter;
-                        spinnerEnquiryGame.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-                        
-
+                        spinnerEnquiryGame.ItemSelected +=
+                            new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
                     }
-
-
-
 
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
                 }
@@ -136,11 +135,19 @@ namespace MySportsBook
 
         private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            Spinner spinner = (Spinner)sender;
-            string toast = string.Format("Selected car is {0}", spinner.GetItemAtPosition(e.Position));
-            Toast.MakeText(this, toast, ToastLength.Long).Show();
+            Spinner spinner = (Spinner) sender;
+            View v = spinner.SelectedView;
+            ((TextView) v).SetTextColor(Color.ParseColor("#000000"));
+        }
 
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string selectedGame = string.Empty;
+            selectedGame = spinnerEnquiryGame.SelectedItem.ToString();
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
         }
     }
 }

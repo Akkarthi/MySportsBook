@@ -10,6 +10,7 @@
     <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.BatchesActivity" />
     <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.CourtActivity" />
     <activity android:label="" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.EnquiryFormActivity" />
+    <activity android:label="" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.EnquiryUserActivity" />
     <activity android:label="My SportsBook" android:screenOrientation="portrait" android:name="md5167cf0c1fa468a34aa4f067b9e4d8de4.LoginActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

@@ -13,7 +13,6 @@ using Android.Support.V4.Widget;
 using Android.Support.V4.App;
 using Android.Graphics.Drawables;
 using Android.Graphics;
-
 using Newtonsoft.Json;
 
 namespace MySportsBook
@@ -40,6 +39,8 @@ namespace MySportsBook
         private TextView txtBatchMenu;
         private RelativeLayout rrLeftMenuEnquiryContainer;
         private TextView txtEnquiryMenu;
+        private RelativeLayout rrLeftMenuEnquiryUserContainer;
+        private TextView txtEnquiryUserMenu;
         #endregion
 
         #region "Abstract Methods"
@@ -147,6 +148,7 @@ namespace MySportsBook
             txtAttendanceMenu.SetTypeface(face, TypefaceStyle.Normal);
             txtBatchMenu.SetTypeface(face, TypefaceStyle.Normal);
             txtEnquiryMenu.SetTypeface(face, TypefaceStyle.Normal);
+            txtEnquiryUserMenu.SetTypeface(face, TypefaceStyle.Normal);
 
         }
         #endregion
@@ -214,6 +216,10 @@ namespace MySportsBook
             txtEnquiryMenu = (TextView)FindViewById(Resource.Id.txtEnquiryMenu);
             rrLeftMenuEnquiryContainer.Click += delegate { LoadEnquiry(); };
 
+            rrLeftMenuEnquiryUserContainer = (RelativeLayout)FindViewById(Resource.Id.rrLeftMenuEnquiryUserContainer);
+            txtEnquiryUserMenu = (TextView)FindViewById(Resource.Id.txtEnquiryUserMenu);
+            rrLeftMenuEnquiryUserContainer.Click += delegate { LoadEnquiryUser(); };
+
         }
         #endregion
 
@@ -254,6 +260,18 @@ namespace MySportsBook
             //close all the other intent
             StartActivity(intent);
         }
+
+        public void LoadEnquiryUser()
+        {
+            commonDetails = GetDetails();
+            commonDetails.isAttendance = false;
+            Intent intent = new Intent(this, typeof(EnquiryUserActivity));
+            intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+            //close all the other intent
+            StartActivity(intent);
+        }
+
+        
 
         public void Attendance()
         {

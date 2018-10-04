@@ -16,12 +16,12 @@ using Newtonsoft.Json;
 
 namespace MySportsBook
 {
-    class EnquiryUser_ItemAdapter : BaseAdapter<Court>
+    class EnquiryUser_ItemAdapter : BaseAdapter<EnquiryUser>
     {
 
         Activity context;
         IList<EnquiryUser> _items;
-        bool ViewEnquiryUserFirstClick = true;
+        bool ViewCourtFirstClick = true;
         private LinearLayout progress;
         private CommonDetails commonDetails;
         Helper helper = new Helper();
@@ -64,18 +64,7 @@ namespace MySportsBook
             lblEnquiryUserMobile.SetTypeface(face, TypefaceStyle.Bold);
 
 
-            var rlCourtItemMainContainer = (LinearLayout)view.FindViewById(Resource.Id.llCourt);
-            rlCourtItemMainContainer.Click += delegate
-            {
 
-                progress.Visibility = Android.Views.ViewStates.Visible;
-                new Thread(new ThreadStart(delegate
-                {
-                    context.RunOnUiThread(async () => { await LoadBatch(position, commonDetails); progress.Visibility = Android.Views.ViewStates.Gone; });
-                })).Start();
-
-
-            };
 
 
 
@@ -87,22 +76,6 @@ namespace MySportsBook
         public override int Count
         {
             get { return _items.Count; }
-        }
-
-        public async Task LoadBatch(int position, CommonDetails details)
-        {
-            if (helper.CheckInternetConnection(context))
-            {
-                details.CourtId = _items[position].CourtId.ToString();
-                var intent = new Intent(context, typeof(BatchesActivity));
-                intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
-                context.StartActivity(intent);
-                ViewCourtFirstClick = false;
-            }
-            else
-            {
-                helper.AlertPopUp("Warning", "Please enable mobile data", context);
-            }
         }
 
     }
