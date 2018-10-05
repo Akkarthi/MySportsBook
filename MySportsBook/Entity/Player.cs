@@ -26,5 +26,7 @@ namespace MySportsBook
         
         public bool Present { get; set; }
 
+        public bool IsAddedPlayerForAttendance { get; set; }
+
     }
 }

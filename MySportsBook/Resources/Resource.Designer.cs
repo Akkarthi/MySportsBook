@@ -2103,76 +2103,79 @@ namespace MySportsBook
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int AmountTextBoxBorder = 2130837504;
+			public const int addicon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int bg = 2130837505;
+			public const int AmountTextBoxBorder = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int boxLight = 2130837506;
+			public const int bg = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int button_small = 2130837507;
+			public const int boxLight = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int ButtonBorder = 2130837508;
+			public const int button_small = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int ButtonStyle = 2130837509;
+			public const int ButtonBorder = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int checkbox = 2130837510;
+			public const int ButtonStyle = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int checkbox_tick = 2130837511;
+			public const int checkbox = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int checkboxstyle = 2130837512;
+			public const int checkbox_tick = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int @checked = 2130837513;
+			public const int checkboxstyle = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int EditTextBoxBorder = 2130837514;
+			public const int @checked = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int FeedbackListItem = 2130837515;
+			public const int EditTextBoxBorder = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int Icon = 2130837516;
+			public const int FeedbackListItem = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int location = 2130837517;
+			public const int Icon = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int menu = 2130837518;
+			public const int location = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int minus = 2130837519;
+			public const int menu = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int passwordicon = 2130837520;
+			public const int minus = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int plus = 2130837521;
+			public const int passwordicon = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int Progress = 2130837522;
+			public const int plus = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int @unchecked = 2130837523;
+			public const int Progress = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int userlisticon = 2130837524;
+			public const int @unchecked = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int UserListItemBorder = 2130837525;
+			public const int userlisticon = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int usernameicon = 2130837526;
+			public const int UserListItemBorder = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int venue = 2130837527;
+			public const int usernameicon = 2130837527;
+			
+			// aapt resource value: 0x7f020018
+			public const int venue = 2130837528;
 			
 			static Drawable()
 			{
@@ -2187,425 +2190,437 @@ namespace MySportsBook
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090068
-			public const int BottomLayout = 2131296360;
-			
-			// aapt resource value: 0x7f090043
-			public const int Picker_Date = 2131296323;
-			
-			// aapt resource value: 0x7f090069
-			public const int RemembermeLayout = 2131296361;
-			
-			// aapt resource value: 0x7f090022
-			public const int ScrollViewBody = 2131296290;
-			
-			// aapt resource value: 0x7f090062
-			public const int bodyLayout = 2131296354;
-			
-			// aapt resource value: 0x7f090010
-			public const int btnBatchCountCancel = 2131296272;
-			
-			// aapt resource value: 0x7f09000f
-			public const int btnBatchCountSubmit = 2131296271;
-			
-			// aapt resource value: 0x7f090027
-			public const int btnCancel = 2131296295;
-			
-			// aapt resource value: 0x7f090021
-			public const int btnGo = 2131296289;
-			
-			// aapt resource value: 0x7f090067
-			public const int btnLogin = 2131296359;
-			
-			// aapt resource value: 0x7f090026
-			public const int btnSubmit = 2131296294;
-			
-			// aapt resource value: 0x7f090044
-			public const int buttonDone = 2131296324;
-			
-			// aapt resource value: 0x7f090066
-			public const int buttonLayout = 2131296358;
-			
-			// aapt resource value: 0x7f09004c
-			public const int editTextEnquiryComment = 2131296332;
-			
-			// aapt resource value: 0x7f090048
-			public const int editTextEnquiryMobile = 2131296328;
-			
-			// aapt resource value: 0x7f090046
-			public const int editTextEnquiryName = 2131296326;
-			
-			// aapt resource value: 0x7f090006
-			public const int gridBatch = 2131296262;
-			
-			// aapt resource value: 0x7f090041
-			public const int imgActionBarLocation = 2131296321;
-			
-			// aapt resource value: 0x7f09002b
-			public const int imgIcon = 2131296299;
-			
-			// aapt resource value: 0x7f09000b
-			public const int imgMinus = 2131296267;
-			
-			// aapt resource value: 0x7f090030
-			public const int imgPlayerUnchecked = 2131296304;
-			
-			// aapt resource value: 0x7f090031
-			public const int imgPlayerchecked = 2131296305;
-			
-			// aapt resource value: 0x7f09000d
-			public const int imgPlus = 2131296269;
-			
-			// aapt resource value: 0x7f090085
-			public const int lblAppname = 2131296389;
-			
-			// aapt resource value: 0x7f090004
-			public const int lblBatchCount = 2131296260;
-			
-			// aapt resource value: 0x7f090003
-			public const int lblBatchName = 2131296259;
-			
-			// aapt resource value: 0x7f090036
-			public const int lblCourtName = 2131296310;
-			
-			// aapt resource value: 0x7f09005e
-			public const int lblEnquiryFeedbackDate = 2131296350;
-			
-			// aapt resource value: 0x7f09005f
-			public const int lblEnquiryUserFeedbackComment = 2131296351;
-			
-			// aapt resource value: 0x7f090055
-			public const int lblEnquiryUserMobile = 2131296341;
-			
-			// aapt resource value: 0x7f090054
-			public const int lblEnquiryUserName = 2131296340;
-			
-			// aapt resource value: 0x7f090063
-			public const int lblLoginMessage = 2131296355;
-			
-			// aapt resource value: 0x7f09002e
-			public const int lblPhone = 2131296302;
-			
-			// aapt resource value: 0x7f09002d
-			public const int lblPlayerName = 2131296301;
-			
-			// aapt resource value: 0x7f090007
-			public const int lblSlot = 2131296263;
-			
-			// aapt resource value: 0x7f09007b
-			public const int lblSportName = 2131296379;
-			
-			// aapt resource value: 0x7f090083
-			public const int lblVenueName = 2131296387;
-			
-			// aapt resource value: 0x7f090016
-			public const int lblheader = 2131296278;
-			
-			// aapt resource value: 0x7f090012
-			public const int left_fragment_container = 2131296274;
-			
-			// aapt resource value: 0x7f090013
-			public const int left_fragment_drawer = 2131296275;
-			
-			// aapt resource value: 0x7f090042
-			public const int linearLayout1 = 2131296322;
-			
-			// aapt resource value: 0x7f09001a
-			public const int linearProgressBar = 2131296282;
-			
-			// aapt resource value: 0x7f09003b
-			public const int llActionBarNameContainer = 2131296315;
-			
-			// aapt resource value: 0x7f09003e
-			public const int llActionBarVenueCodeContainer = 2131296318;
-			
-			// aapt resource value: 0x7f090040
-			public const int llActionBarVenueImgContainer = 2131296320;
-			
-			// aapt resource value: 0x7f09001e
-			public const int llAttendance = 2131296286;
-			
-			// aapt resource value: 0x7f09002c
-			public const int llBatchPlayer = 2131296300;
-			
-			// aapt resource value: 0x7f090023
-			public const int llBatchPlayerList = 2131296291;
-			
-			// aapt resource value: 0x7f090019
-			public const int llBatchesList = 2131296281;
-			
-			// aapt resource value: 0x7f090035
-			public const int llCourt = 2131296309;
-			
-			// aapt resource value: 0x7f090039
-			public const int llCourtList = 2131296313;
-			
-			// aapt resource value: 0x7f090057
-			public const int llEnquiryFollowUpList = 2131296343;
-			
-			// aapt resource value: 0x7f090053
-			public const int llEnquiryUser = 2131296339;
-			
-			// aapt resource value: 0x7f090058
-			public const int llEnquiryUserDetails = 2131296344;
-			
-			// aapt resource value: 0x7f09005d
-			public const int llEnquiryUserFeedback = 2131296349;
-			
-			// aapt resource value: 0x7f09004e
-			public const int llEnquiryUserList = 2131296334;
-			
-			// aapt resource value: 0x7f09006a
-			public const int llMenuDrawerMainContainer = 2131296362;
-			
-			// aapt resource value: 0x7f090005
-			public const int llSlot = 2131296261;
-			
-			// aapt resource value: 0x7f09007a
-			public const int llSport = 2131296378;
-			
-			// aapt resource value: 0x7f09007d
-			public const int llSportList = 2131296381;
-			
-			// aapt resource value: 0x7f090082
-			public const int llVenue = 2131296386;
-			
-			// aapt resource value: 0x7f090086
-			public const int llVenueList = 2131296390;
-			
-			// aapt resource value: 0x7f090024
-			public const int lstBatchPlayer = 2131296292;
-			
-			// aapt resource value: 0x7f09003a
-			public const int lstCourt = 2131296314;
-			
-			// aapt resource value: 0x7f09004f
-			public const int lstEnquiryUser = 2131296335;
-			
-			// aapt resource value: 0x7f090059
-			public const int lstEnquiryUserFollowUpList = 2131296345;
-			
-			// aapt resource value: 0x7f09007e
-			public const int lstSport = 2131296382;
-			
-			// aapt resource value: 0x7f090087
-			public const int lstVenue = 2131296391;
-			
-			// aapt resource value: 0x7f090011
-			public const int myMenuDrawer = 2131296273;
-			
-			// aapt resource value: 0x7f09008b
-			public const int nav_FeedBack = 2131296395;
-			
-			// aapt resource value: 0x7f09008a
-			public const int nav_about = 2131296394;
-			
-			// aapt resource value: 0x7f090088
-			public const int nav_home = 2131296392;
-			
-			// aapt resource value: 0x7f090089
-			public const int nav_messages = 2131296393;
-			
-			// aapt resource value: 0x7f090060
-			public const int parentContainer = 2131296352;
-			
-			// aapt resource value: 0x7f09001b
-			public const int progressring = 2131296283;
-			
-			// aapt resource value: 0x7f09003d
-			public const int rlActionBarLocationContainer = 2131296317;
-			
-			// aapt resource value: 0x7f090037
-			public const int rlAddUserMainContainer = 2131296311;
-			
-			// aapt resource value: 0x7f09001d
-			public const int rlAppname = 2131296285;
-			
-			// aapt resource value: 0x7f090001
-			public const int rlBatchContainer = 2131296257;
-			
-			// aapt resource value: 0x7f09000a
-			public const int rlBatchCountContainer = 2131296266;
-			
-			// aapt resource value: 0x7f090008
-			public const int rlBatchCountHeader = 2131296264;
-			
-			// aapt resource value: 0x7f090000
-			public const int rlBatchItemMainContainer = 2131296256;
-			
-			// aapt resource value: 0x7f090029
-			public const int rlBatchPlayerContainer = 2131296297;
-			
-			// aapt resource value: 0x7f090028
-			public const int rlBatchPlayerItemMainContainer = 2131296296;
-			
-			// aapt resource value: 0x7f09002a
-			public const int rlBatchPlayerLeftImage = 2131296298;
-			
-			// aapt resource value: 0x7f09001c
-			public const int rlBatchPlayerMainContainer = 2131296284;
-			
-			// aapt resource value: 0x7f09002f
-			public const int rlBatchPlayerRightImage = 2131296303;
-			
-			// aapt resource value: 0x7f09000e
-			public const int rlBatchSubmitButtonContainer = 2131296270;
-			
-			// aapt resource value: 0x7f090018
-			public const int rlBatchesContainer = 2131296280;
-			
-			// aapt resource value: 0x7f090014
-			public const int rlBatchesMainContainer = 2131296276;
-			
-			// aapt resource value: 0x7f090017
-			public const int rlBodyContainer = 2131296279;
-			
-			// aapt resource value: 0x7f090025
-			public const int rlBottomButtonContainer = 2131296293;
-			
-			// aapt resource value: 0x7f090033
-			public const int rlCourtContainer = 2131296307;
-			
-			// aapt resource value: 0x7f090032
-			public const int rlCourtItemMainContainer = 2131296306;
-			
-			// aapt resource value: 0x7f090034
-			public const int rlCourtLeftImage = 2131296308;
-			
-			// aapt resource value: 0x7f090051
-			public const int rlEnquiryUserContainer = 2131296337;
-			
-			// aapt resource value: 0x7f090056
-			public const int rlEnquiryUserDetailMainContainer = 2131296342;
-			
-			// aapt resource value: 0x7f09005c
-			public const int rlEnquiryUserFeedbackContainer = 2131296348;
-			
-			// aapt resource value: 0x7f09005b
-			public const int rlEnquiryUserFeedbackItemMainContainer = 2131296347;
-			
-			// aapt resource value: 0x7f090050
-			public const int rlEnquiryUserItemMainContainer = 2131296336;
-			
-			// aapt resource value: 0x7f090052
-			public const int rlEnquiryUserLeftImage = 2131296338;
-			
-			// aapt resource value: 0x7f09004d
-			public const int rlEnquiryUserMainContainer = 2131296333;
-			
-			// aapt resource value: 0x7f090015
-			public const int rlHeader = 2131296277;
-			
-			// aapt resource value: 0x7f090038
-			public const int rlSearchView = 2131296312;
-			
-			// aapt resource value: 0x7f090078
-			public const int rlSportContainer = 2131296376;
-			
-			// aapt resource value: 0x7f090077
-			public const int rlSportItemMainContainer = 2131296375;
-			
-			// aapt resource value: 0x7f090079
-			public const int rlSportLeftImage = 2131296377;
-			
-			// aapt resource value: 0x7f09007c
-			public const int rlSportMainContainer = 2131296380;
-			
-			// aapt resource value: 0x7f090080
-			public const int rlVenueContainer = 2131296384;
-			
-			// aapt resource value: 0x7f09007f
-			public const int rlVenueItemMainContainer = 2131296383;
-			
-			// aapt resource value: 0x7f090081
-			public const int rlVenueLeftImage = 2131296385;
-			
-			// aapt resource value: 0x7f090084
-			public const int rlVenueMainContainer = 2131296388;
-			
-			// aapt resource value: 0x7f090002
-			public const int rl_center = 2131296258;
-			
-			// aapt resource value: 0x7f09006f
-			public const int rrLeftMenuAttendanceContainer = 2131296367;
-			
-			// aapt resource value: 0x7f09006b
-			public const int rrLeftMenuBatchAvailabiltyContainer = 2131296363;
-			
-			// aapt resource value: 0x7f09006d
-			public const int rrLeftMenuBatchContainer = 2131296365;
-			
-			// aapt resource value: 0x7f090071
-			public const int rrLeftMenuEnquiryContainer = 2131296369;
-			
-			// aapt resource value: 0x7f090073
-			public const int rrLeftMenuEnquiryUserContainer = 2131296371;
-			
-			// aapt resource value: 0x7f090075
-			public const int rrLeftMenuLogOutContainer = 2131296373;
-			
-			// aapt resource value: 0x7f09004a
-			public const int spinnerEnquiryGame = 2131296330;
-			
-			// aapt resource value: 0x7f09003c
-			public const int txtActionBarAppName = 2131296316;
-			
-			// aapt resource value: 0x7f09003f
-			public const int txtActionBarVenueCode = 2131296319;
-			
-			// aapt resource value: 0x7f09001f
-			public const int txtAttendance = 2131296287;
-			
-			// aapt resource value: 0x7f090070
-			public const int txtAttendanceMenu = 2131296368;
-			
 			// aapt resource value: 0x7f09006c
-			public const int txtBatchAvailability = 2131296364;
-			
-			// aapt resource value: 0x7f09000c
-			public const int txtBatchCount = 2131296268;
-			
-			// aapt resource value: 0x7f090009
-			public const int txtBatchHeader = 2131296265;
-			
-			// aapt resource value: 0x7f09006e
-			public const int txtBatchMenu = 2131296366;
-			
-			// aapt resource value: 0x7f09004b
-			public const int txtEnquiryComment = 2131296331;
-			
-			// aapt resource value: 0x7f09005a
-			public const int txtEnquiryFeedBack = 2131296346;
-			
-			// aapt resource value: 0x7f090049
-			public const int txtEnquiryGame = 2131296329;
-			
-			// aapt resource value: 0x7f090072
-			public const int txtEnquiryMenu = 2131296370;
+			public const int BottomLayout = 2131296364;
 			
 			// aapt resource value: 0x7f090047
-			public const int txtEnquiryMobile = 2131296327;
+			public const int Picker_Date = 2131296327;
 			
-			// aapt resource value: 0x7f090045
-			public const int txtEnquiryName = 2131296325;
+			// aapt resource value: 0x7f09006d
+			public const int RemembermeLayout = 2131296365;
 			
-			// aapt resource value: 0x7f090074
-			public const int txtEnquiryUserMenu = 2131296372;
+			// aapt resource value: 0x7f090008
+			public const int ScrollViewBody = 2131296264;
 			
-			// aapt resource value: 0x7f090076
-			public const int txtLogOut = 2131296374;
+			// aapt resource value: 0x7f090066
+			public const int bodyLayout = 2131296358;
 			
-			// aapt resource value: 0x7f090061
-			public const int txtName = 2131296353;
-			
-			// aapt resource value: 0x7f090065
-			public const int txtPassword = 2131296357;
+			// aapt resource value: 0x7f090027
+			public const int btnAddPlayer = 2131296295;
 			
 			// aapt resource value: 0x7f090020
-			public const int txtSelectDate = 2131296288;
+			public const int btnBatchCountCancel = 2131296288;
+			
+			// aapt resource value: 0x7f09001f
+			public const int btnBatchCountSubmit = 2131296287;
+			
+			// aapt resource value: 0x7f09002b
+			public const int btnCancel = 2131296299;
+			
+			// aapt resource value: 0x7f09000d
+			public const int btnDone = 2131296269;
+			
+			// aapt resource value: 0x7f09006b
+			public const int btnLogin = 2131296363;
+			
+			// aapt resource value: 0x7f09002a
+			public const int btnSubmit = 2131296298;
+			
+			// aapt resource value: 0x7f090048
+			public const int buttonDone = 2131296328;
+			
+			// aapt resource value: 0x7f09006a
+			public const int buttonLayout = 2131296362;
+			
+			// aapt resource value: 0x7f090050
+			public const int editTextEnquiryComment = 2131296336;
+			
+			// aapt resource value: 0x7f09004c
+			public const int editTextEnquiryMobile = 2131296332;
+			
+			// aapt resource value: 0x7f09004a
+			public const int editTextEnquiryName = 2131296330;
+			
+			// aapt resource value: 0x7f090016
+			public const int gridBatch = 2131296278;
+			
+			// aapt resource value: 0x7f090045
+			public const int imgActionBarLocation = 2131296325;
+			
+			// aapt resource value: 0x7f09002f
+			public const int imgIcon = 2131296303;
+			
+			// aapt resource value: 0x7f09001b
+			public const int imgMinus = 2131296283;
+			
+			// aapt resource value: 0x7f090034
+			public const int imgPlayerUnchecked = 2131296308;
+			
+			// aapt resource value: 0x7f090035
+			public const int imgPlayerchecked = 2131296309;
+			
+			// aapt resource value: 0x7f09001d
+			public const int imgPlus = 2131296285;
+			
+			// aapt resource value: 0x7f090089
+			public const int lblAppname = 2131296393;
+			
+			// aapt resource value: 0x7f090014
+			public const int lblBatchCount = 2131296276;
+			
+			// aapt resource value: 0x7f090013
+			public const int lblBatchName = 2131296275;
+			
+			// aapt resource value: 0x7f09003a
+			public const int lblCourtName = 2131296314;
+			
+			// aapt resource value: 0x7f090062
+			public const int lblEnquiryFeedbackDate = 2131296354;
+			
+			// aapt resource value: 0x7f090063
+			public const int lblEnquiryUserFeedbackComment = 2131296355;
+			
+			// aapt resource value: 0x7f090059
+			public const int lblEnquiryUserMobile = 2131296345;
+			
+			// aapt resource value: 0x7f090058
+			public const int lblEnquiryUserName = 2131296344;
+			
+			// aapt resource value: 0x7f090067
+			public const int lblLoginMessage = 2131296359;
+			
+			// aapt resource value: 0x7f090032
+			public const int lblPhone = 2131296306;
+			
+			// aapt resource value: 0x7f090031
+			public const int lblPlayerName = 2131296305;
+			
+			// aapt resource value: 0x7f090017
+			public const int lblSlot = 2131296279;
+			
+			// aapt resource value: 0x7f09007f
+			public const int lblSportName = 2131296383;
+			
+			// aapt resource value: 0x7f090087
+			public const int lblVenueName = 2131296391;
+			
+			// aapt resource value: 0x7f090006
+			public const int lblheader = 2131296262;
+			
+			// aapt resource value: 0x7f090001
+			public const int left_fragment_container = 2131296257;
+			
+			// aapt resource value: 0x7f090002
+			public const int left_fragment_drawer = 2131296258;
+			
+			// aapt resource value: 0x7f090046
+			public const int linearLayout1 = 2131296326;
+			
+			// aapt resource value: 0x7f09000e
+			public const int linearProgressBar = 2131296270;
+			
+			// aapt resource value: 0x7f09003f
+			public const int llActionBarNameContainer = 2131296319;
+			
+			// aapt resource value: 0x7f090042
+			public const int llActionBarVenueCodeContainer = 2131296322;
+			
+			// aapt resource value: 0x7f090044
+			public const int llActionBarVenueImgContainer = 2131296324;
+			
+			// aapt resource value: 0x7f090009
+			public const int llAttendance = 2131296265;
+			
+			// aapt resource value: 0x7f09000a
+			public const int llAttendanceAddList = 2131296266;
+			
+			// aapt resource value: 0x7f090030
+			public const int llBatchPlayer = 2131296304;
+			
+			// aapt resource value: 0x7f090028
+			public const int llBatchPlayerList = 2131296296;
+			
+			// aapt resource value: 0x7f090023
+			public const int llBatchesList = 2131296291;
+			
+			// aapt resource value: 0x7f090039
+			public const int llCourt = 2131296313;
+			
+			// aapt resource value: 0x7f09003d
+			public const int llCourtList = 2131296317;
+			
+			// aapt resource value: 0x7f09005b
+			public const int llEnquiryFollowUpList = 2131296347;
+			
+			// aapt resource value: 0x7f090057
+			public const int llEnquiryUser = 2131296343;
+			
+			// aapt resource value: 0x7f09005c
+			public const int llEnquiryUserDetails = 2131296348;
+			
+			// aapt resource value: 0x7f090061
+			public const int llEnquiryUserFeedback = 2131296353;
+			
+			// aapt resource value: 0x7f090052
+			public const int llEnquiryUserList = 2131296338;
+			
+			// aapt resource value: 0x7f09006e
+			public const int llMenuDrawerMainContainer = 2131296366;
+			
+			// aapt resource value: 0x7f090015
+			public const int llSlot = 2131296277;
+			
+			// aapt resource value: 0x7f09007e
+			public const int llSport = 2131296382;
+			
+			// aapt resource value: 0x7f090081
+			public const int llSportList = 2131296385;
+			
+			// aapt resource value: 0x7f090086
+			public const int llVenue = 2131296390;
+			
+			// aapt resource value: 0x7f09008a
+			public const int llVenueList = 2131296394;
+			
+			// aapt resource value: 0x7f09000b
+			public const int lstAttendanceAddPlayer = 2131296267;
+			
+			// aapt resource value: 0x7f090029
+			public const int lstBatchPlayer = 2131296297;
+			
+			// aapt resource value: 0x7f09003e
+			public const int lstCourt = 2131296318;
+			
+			// aapt resource value: 0x7f090053
+			public const int lstEnquiryUser = 2131296339;
+			
+			// aapt resource value: 0x7f09005d
+			public const int lstEnquiryUserFollowUpList = 2131296349;
+			
+			// aapt resource value: 0x7f090082
+			public const int lstSport = 2131296386;
+			
+			// aapt resource value: 0x7f09008b
+			public const int lstVenue = 2131296395;
+			
+			// aapt resource value: 0x7f090000
+			public const int myMenuDrawer = 2131296256;
+			
+			// aapt resource value: 0x7f09008f
+			public const int nav_FeedBack = 2131296399;
+			
+			// aapt resource value: 0x7f09008e
+			public const int nav_about = 2131296398;
+			
+			// aapt resource value: 0x7f09008c
+			public const int nav_home = 2131296396;
+			
+			// aapt resource value: 0x7f09008d
+			public const int nav_messages = 2131296397;
 			
 			// aapt resource value: 0x7f090064
-			public const int txtUsername = 2131296356;
+			public const int parentContainer = 2131296356;
+			
+			// aapt resource value: 0x7f09000f
+			public const int progressring = 2131296271;
+			
+			// aapt resource value: 0x7f090041
+			public const int rlActionBarLocationContainer = 2131296321;
+			
+			// aapt resource value: 0x7f09003b
+			public const int rlAddUserMainContainer = 2131296315;
+			
+			// aapt resource value: 0x7f090005
+			public const int rlAppname = 2131296261;
+			
+			// aapt resource value: 0x7f090003
+			public const int rlAttendanceAddMainContainer = 2131296259;
+			
+			// aapt resource value: 0x7f090011
+			public const int rlBatchContainer = 2131296273;
+			
+			// aapt resource value: 0x7f09001a
+			public const int rlBatchCountContainer = 2131296282;
+			
+			// aapt resource value: 0x7f090018
+			public const int rlBatchCountHeader = 2131296280;
+			
+			// aapt resource value: 0x7f090010
+			public const int rlBatchItemMainContainer = 2131296272;
+			
+			// aapt resource value: 0x7f09002d
+			public const int rlBatchPlayerContainer = 2131296301;
+			
+			// aapt resource value: 0x7f09002c
+			public const int rlBatchPlayerItemMainContainer = 2131296300;
+			
+			// aapt resource value: 0x7f09002e
+			public const int rlBatchPlayerLeftImage = 2131296302;
+			
+			// aapt resource value: 0x7f090024
+			public const int rlBatchPlayerMainContainer = 2131296292;
+			
+			// aapt resource value: 0x7f090033
+			public const int rlBatchPlayerRightImage = 2131296307;
+			
+			// aapt resource value: 0x7f09001e
+			public const int rlBatchSubmitButtonContainer = 2131296286;
+			
+			// aapt resource value: 0x7f090022
+			public const int rlBatchesContainer = 2131296290;
+			
+			// aapt resource value: 0x7f090021
+			public const int rlBatchesMainContainer = 2131296289;
+			
+			// aapt resource value: 0x7f090007
+			public const int rlBodyContainer = 2131296263;
+			
+			// aapt resource value: 0x7f09000c
+			public const int rlBottomButtonContainer = 2131296268;
+			
+			// aapt resource value: 0x7f090037
+			public const int rlCourtContainer = 2131296311;
+			
+			// aapt resource value: 0x7f090036
+			public const int rlCourtItemMainContainer = 2131296310;
+			
+			// aapt resource value: 0x7f090038
+			public const int rlCourtLeftImage = 2131296312;
+			
+			// aapt resource value: 0x7f090055
+			public const int rlEnquiryUserContainer = 2131296341;
+			
+			// aapt resource value: 0x7f09005a
+			public const int rlEnquiryUserDetailMainContainer = 2131296346;
+			
+			// aapt resource value: 0x7f090060
+			public const int rlEnquiryUserFeedbackContainer = 2131296352;
+			
+			// aapt resource value: 0x7f09005f
+			public const int rlEnquiryUserFeedbackItemMainContainer = 2131296351;
+			
+			// aapt resource value: 0x7f090054
+			public const int rlEnquiryUserItemMainContainer = 2131296340;
+			
+			// aapt resource value: 0x7f090056
+			public const int rlEnquiryUserLeftImage = 2131296342;
+			
+			// aapt resource value: 0x7f090051
+			public const int rlEnquiryUserMainContainer = 2131296337;
+			
+			// aapt resource value: 0x7f090004
+			public const int rlHeader = 2131296260;
+			
+			// aapt resource value: 0x7f09003c
+			public const int rlSearchView = 2131296316;
+			
+			// aapt resource value: 0x7f09007c
+			public const int rlSportContainer = 2131296380;
+			
+			// aapt resource value: 0x7f09007b
+			public const int rlSportItemMainContainer = 2131296379;
+			
+			// aapt resource value: 0x7f09007d
+			public const int rlSportLeftImage = 2131296381;
+			
+			// aapt resource value: 0x7f090080
+			public const int rlSportMainContainer = 2131296384;
+			
+			// aapt resource value: 0x7f090084
+			public const int rlVenueContainer = 2131296388;
+			
+			// aapt resource value: 0x7f090083
+			public const int rlVenueItemMainContainer = 2131296387;
+			
+			// aapt resource value: 0x7f090085
+			public const int rlVenueLeftImage = 2131296389;
+			
+			// aapt resource value: 0x7f090088
+			public const int rlVenueMainContainer = 2131296392;
+			
+			// aapt resource value: 0x7f090012
+			public const int rl_center = 2131296274;
+			
+			// aapt resource value: 0x7f090073
+			public const int rrLeftMenuAttendanceContainer = 2131296371;
+			
+			// aapt resource value: 0x7f09006f
+			public const int rrLeftMenuBatchAvailabiltyContainer = 2131296367;
+			
+			// aapt resource value: 0x7f090071
+			public const int rrLeftMenuBatchContainer = 2131296369;
+			
+			// aapt resource value: 0x7f090075
+			public const int rrLeftMenuEnquiryContainer = 2131296373;
+			
+			// aapt resource value: 0x7f090077
+			public const int rrLeftMenuEnquiryUserContainer = 2131296375;
+			
+			// aapt resource value: 0x7f090079
+			public const int rrLeftMenuLogOutContainer = 2131296377;
+			
+			// aapt resource value: 0x7f09004e
+			public const int spinnerEnquiryGame = 2131296334;
+			
+			// aapt resource value: 0x7f090040
+			public const int txtActionBarAppName = 2131296320;
+			
+			// aapt resource value: 0x7f090043
+			public const int txtActionBarVenueCode = 2131296323;
+			
+			// aapt resource value: 0x7f090025
+			public const int txtAttendance = 2131296293;
+			
+			// aapt resource value: 0x7f090074
+			public const int txtAttendanceMenu = 2131296372;
+			
+			// aapt resource value: 0x7f090070
+			public const int txtBatchAvailability = 2131296368;
+			
+			// aapt resource value: 0x7f09001c
+			public const int txtBatchCount = 2131296284;
+			
+			// aapt resource value: 0x7f090019
+			public const int txtBatchHeader = 2131296281;
+			
+			// aapt resource value: 0x7f090072
+			public const int txtBatchMenu = 2131296370;
+			
+			// aapt resource value: 0x7f09004f
+			public const int txtEnquiryComment = 2131296335;
+			
+			// aapt resource value: 0x7f09005e
+			public const int txtEnquiryFeedBack = 2131296350;
+			
+			// aapt resource value: 0x7f09004d
+			public const int txtEnquiryGame = 2131296333;
+			
+			// aapt resource value: 0x7f090076
+			public const int txtEnquiryMenu = 2131296374;
+			
+			// aapt resource value: 0x7f09004b
+			public const int txtEnquiryMobile = 2131296331;
+			
+			// aapt resource value: 0x7f090049
+			public const int txtEnquiryName = 2131296329;
+			
+			// aapt resource value: 0x7f090078
+			public const int txtEnquiryUserMenu = 2131296376;
+			
+			// aapt resource value: 0x7f09007a
+			public const int txtLogOut = 2131296378;
+			
+			// aapt resource value: 0x7f090065
+			public const int txtName = 2131296357;
+			
+			// aapt resource value: 0x7f090069
+			public const int txtPassword = 2131296361;
+			
+			// aapt resource value: 0x7f090026
+			public const int txtSelectDate = 2131296294;
+			
+			// aapt resource value: 0x7f090068
+			public const int txtUsername = 2131296360;
 			
 			static Id()
 			{
@@ -2646,73 +2661,76 @@ namespace MySportsBook
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int batch = 2130903040;
+			public const int AttendanceAddPlayer = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int batch_item = 2130903041;
+			public const int batch = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int BatchCountUpdatePopUp = 2130903042;
+			public const int batch_item = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Batches = 2130903043;
+			public const int BatchCountUpdatePopUp = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int BatchPlayer = 2130903044;
+			public const int Batches = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int batchplayer_item = 2130903045;
+			public const int BatchPlayer = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int court_item = 2130903046;
+			public const int batchplayer_item = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int CourtList = 2130903047;
+			public const int court_item = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int CustomActionBar = 2130903048;
+			public const int CourtList = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int datepicker_dialog = 2130903049;
+			public const int CustomActionBar = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int EnquiryForm = 2130903050;
+			public const int datepicker_dialog = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int EnquiryUser = 2130903051;
+			public const int EnquiryForm = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int enquiryuser_item = 2130903052;
+			public const int EnquiryUser = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int EnquiryUserDetail = 2130903053;
+			public const int enquiryuser_item = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int enquiryuserfeedback_item = 2130903054;
+			public const int EnquiryUserDetail = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Login = 2130903055;
+			public const int enquiryuserfeedback_item = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Main = 2130903056;
+			public const int Login = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int menu_drawer = 2130903057;
+			public const int Main = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int ProgressBar = 2130903058;
+			public const int menu_drawer = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int sport_item = 2130903059;
+			public const int ProgressBar = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int Sports = 2130903060;
+			public const int sport_item = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int venue_item = 2130903061;
+			public const int Sports = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int Venues = 2130903062;
+			public const int venue_item = 2130903062;
+			
+			// aapt resource value: 0x7f030017
+			public const int Venues = 2130903063;
 			
 			static Layout()
 			{

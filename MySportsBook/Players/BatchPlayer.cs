@@ -17,7 +17,7 @@ using Android.Views.InputMethods;
 
 namespace MySportsBook
 {
-    [Activity(Label = "", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait,WindowSoftInputMode = SoftInput.StateHidden)]
+    [Activity(Label = "", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, WindowSoftInputMode = SoftInput.StateHidden)]
     public class BatchPlayer : MenuActivity, PlayerPositionInterface
     {
         ListView batchPlayerListView;
@@ -33,6 +33,7 @@ namespace MySportsBook
         private Button btnSubmit;
         private Button btnCancel;
         private Button btnGo;
+        private Button btnAddPlayer;
         private LinearLayout llAttendance;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -48,7 +49,8 @@ namespace MySportsBook
             txtAttendance = FindViewById<TextView>(Resource.Id.txtAttendance);
             btnSubmit = FindViewById<Button>(Resource.Id.btnSubmit);
             btnCancel = FindViewById<Button>(Resource.Id.btnCancel);
-            btnGo = FindViewById<Button>(Resource.Id.btnGo);
+            btnAddPlayer = FindViewById<Button>(Resource.Id.btnAddPlayer);
+            //btnGo = FindViewById<Button>(Resource.Id.btnGo);
             llAttendance = FindViewById<LinearLayout>(Resource.Id.llAttendance);
 
             txtSelectDate = FindViewById<TextView>(Resource.Id.txtSelectDate);
@@ -62,11 +64,13 @@ namespace MySportsBook
             txtAttendance.SetTypeface(face, TypefaceStyle.Normal);
             btnSubmit.SetTypeface(face, TypefaceStyle.Normal);
             btnCancel.SetTypeface(face, TypefaceStyle.Normal);
-            btnGo.SetTypeface(face, TypefaceStyle.Normal);
+            //btnGo.SetTypeface(face, TypefaceStyle.Normal);
+            btnAddPlayer.SetTypeface(face, TypefaceStyle.Normal);
 
             btnSubmit.SetAllCaps(false);
             btnCancel.SetAllCaps(false);
-            btnGo.SetAllCaps(false);
+            //btnGo.SetAllCaps(false);
+            btnAddPlayer.SetAllCaps(false);
 
             txtSelectDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
 
@@ -78,30 +82,33 @@ namespace MySportsBook
             {
                 RunOnUiThread(async () =>
                 {
-                    await LoadPlayer(commonDetails,Convert.ToDateTime(txtSelectDate.Text));
+                    await LoadPlayer(commonDetails, Convert.ToDateTime(txtSelectDate.Text));
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
                 });
             })).Start();
 
             btnSubmit.Click += btnSubmit_Click;
-            btnGo.Click += btnGo_Click;
+            //btnGo.Click += btnGo_Click;
             btnCancel.Click += btnCancel_Click;
+            btnAddPlayer.Click += btnAddPlayer_Click;
 
             if (commonDetails.isAttendance)
             {
                 llAttendance.Visibility = ViewStates.Visible;
                 btnSubmit.Visibility = ViewStates.Visible;
                 btnCancel.Visibility = ViewStates.Visible;
+                btnAddPlayer.Visibility = ViewStates.Visible;
             }
             else
             {
                 llAttendance.Visibility = ViewStates.Gone;
                 btnSubmit.Visibility = ViewStates.Gone;
                 btnCancel.Visibility = ViewStates.Gone;
+                btnAddPlayer.Visibility = ViewStates.Gone;
             }
         }
 
-        public async Task LoadPlayer(CommonDetails details,DateTime selecteDateTime)
+        public async Task LoadPlayer(CommonDetails details, DateTime selecteDateTime)
         {
             if (helper.CheckInternetConnection(this))
             {
@@ -239,7 +246,7 @@ namespace MySportsBook
             private void HideKeyBoard()
             {
                 InputMethodManager inputManager =
-                    (InputMethodManager) this.batchPlayerActivity.GetSystemService(Context.InputMethodService);
+                    (InputMethodManager)this.batchPlayerActivity.GetSystemService(Context.InputMethodService);
                 inputManager.HideSoftInputFromWindow(this.batchPlayerActivity.CurrentFocus.WindowToken,
                     HideSoftInputFlags.NotAlways);
             }
@@ -254,8 +261,8 @@ namespace MySportsBook
                     dialog = new Dialog(this.batchPlayerActivity);
                     dialog.SetContentView(Resource.Layout.datepicker_dialog);
                     dialog.SetTitle(title);
-                    btnDone = (Button) dialog.FindViewById<Button>(Resource.Id.buttonDone);
-                    dp = (DatePicker) dialog.FindViewById<DatePicker>(Resource.Id.Picker_Date);
+                    btnDone = (Button)dialog.FindViewById<Button>(Resource.Id.buttonDone);
+                    dp = (DatePicker)dialog.FindViewById<DatePicker>(Resource.Id.Picker_Date);
 
                     //after clicking done bind the date time to textbox
                     btnDone.Click += delegate
@@ -272,6 +279,18 @@ namespace MySportsBook
                         }
 
                         dialog.Dismiss();
+
+                        this.batchPlayerActivity.linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+
+                        new Thread(new ThreadStart(delegate
+                        {
+                            this.batchPlayerActivity.RunOnUiThread(async () =>
+                            {
+                                await this.batchPlayerActivity.LoadPlayer(this.batchPlayerActivity.commonDetails, Convert.ToDateTime(this.batchPlayerActivity.txtSelectDate.Text));
+                                this.batchPlayerActivity.linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
+                            });
+                        })).Start();
+
                     };
                     dialog.Show();
 
@@ -287,7 +306,7 @@ namespace MySportsBook
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            List<Attendance> attendancesList=new List<Attendance>();
+            List<Attendance> attendancesList = new List<Attendance>();
             Attendance attendance;
 
             linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
@@ -299,7 +318,7 @@ namespace MySportsBook
                     attendance = new Attendance();
                     attendance.VenueId = Convert.ToInt32(commonDetails.VenueId);
                     attendance.BatchId = Convert.ToInt32(commonDetails.BatchId);
-                    attendance.PlayerId= Convert.ToInt32(presentList.PlayerId);
+                    attendance.PlayerId = Convert.ToInt32(presentList.PlayerId);
                     attendance.Date = Convert.ToDateTime(txtSelectDate.Text).ToString("MM-dd-yyyy");
 
                     attendancesList.Add(attendance);
@@ -313,21 +332,21 @@ namespace MySportsBook
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
                 });
             })).Start();
-           
+
         }
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+            //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
 
-            new Thread(new ThreadStart(delegate
-            {
-                RunOnUiThread(async () =>
-                {
-                    await LoadPlayer(commonDetails, Convert.ToDateTime(txtSelectDate.Text));
-                    linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
-                });
-            })).Start();
+            //new Thread(new ThreadStart(delegate
+            //{
+            //    RunOnUiThread(async () =>
+            //    {
+            //        await LoadPlayer(commonDetails, Convert.ToDateTime(txtSelectDate.Text));
+            //        linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
+            //    });
+            //})).Start();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -338,7 +357,15 @@ namespace MySportsBook
             StartActivity(intent);
         }
 
-        public async  Task UpdateAttendance(string token,List<Attendance> attendancesList)
+        private void btnAddPlayer_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(AttendanceAddPlayerActivity));
+            intent.AddFlags(ActivityFlags.ClearTop);
+            intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+            StartActivityForResult(intent, 1);
+        }
+
+        public async Task UpdateAttendance(string token, List<Attendance> attendancesList)
         {
             bool result = false;
             if (helper.CheckInternetConnection(this))
@@ -349,7 +376,7 @@ namespace MySportsBook
                     result = serviceHelper.AttendanceSubmit(token, attendancesList);
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
 
-                    if(result)
+                    if (result)
                         helper.AlertPopUp("Message", "Data has been updated successfully", this);
                     else
                     {
@@ -368,6 +395,23 @@ namespace MySportsBook
 
                 linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
             }
+        }
+
+        protected override void OnActivityResult(Int32 requestCode, Result resultCode, Intent data)
+        {
+            List<Player> attendancePlayer = new List<Player>();
+
+            attendancePlayer= JsonConvert.DeserializeObject<List<Player>>(data.Extras.GetString("attendancePlayer"));
+
+            if (attendancePlayer != null && attendancePlayer.Count > 0){
+                foreach (var player in attendancePlayer) {
+                    if (!playerList.Any(x=>x.PlayerId==player.PlayerId)) {
+                        playerList.Add(player);
+                    }
+                }
+            }
+            batchPlayer_ItemAdapter.NotifyDataSetChanged();
+
         }
     }
 }

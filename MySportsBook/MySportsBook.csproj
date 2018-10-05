@@ -98,6 +98,8 @@
     <Compile Include="Entity\Venue.cs" />
     <Compile Include="Login\LoginActivity.cs" />
     <Compile Include="MenuDrawer\MenuActivity.cs" />
+    <Compile Include="Players\AttendanceAddPlayerActivity.cs" />
+    <Compile Include="Players\AttendanceAddPlayer_ItemAdapter.cs" />
     <Compile Include="Players\BatchPlayer.cs" />
     <Compile Include="Players\BatchPlayer_ItemAdapter.cs" />
     <Compile Include="Players\PlayerPositionInterface.cs" />
@@ -567,6 +569,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\FeedbackListItem.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\addicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AttendanceAddPlayer.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

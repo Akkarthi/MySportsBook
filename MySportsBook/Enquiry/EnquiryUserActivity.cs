@@ -123,11 +123,11 @@ namespace MySportsBook
                     enquiryUserList.Add(enquiryUser);
 
 
-                    linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
-                    new Thread(new ThreadStart(delegate
-                    {
-                        RunOnUiThread(async () => { await LoadEnquiryList(commonDetails); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
-                    })).Start();
+                    //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+                    //new Thread(new ThreadStart(delegate
+                    //{
+                    //    RunOnUiThread(async () => { await LoadEnquiryList(commonDetails); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
+                    //})).Start();
 
 
                     if (enquiryUserList != null && enquiryUserList.Count > 0)
