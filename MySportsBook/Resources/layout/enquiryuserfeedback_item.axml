@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlEnquiryUserFeedbackItemMainContainer">
+    <LinearLayout
+        android:id="@+id/rlEnquiryUserFeedbackContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/_5sdp"
+      android:background="@drawable/feedbacklistitem">
+        <RelativeLayout
+            android:id="@+id/rl_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llEnquiryUserFeedback">
+                <TextView
+                    android:id="@+id/lblEnquiryFeedbackDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TExt viewwcenter1"
+                    android:textColor="#596370"
+                    android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:id="@+id/lblEnquiryUserFeedbackComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TExt viewwcenter1"
+                    android:textColor="#596370"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_below="@+id/lblEnquiryFeedbackDate" />
+
+              
+            </LinearLayout>
+         
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

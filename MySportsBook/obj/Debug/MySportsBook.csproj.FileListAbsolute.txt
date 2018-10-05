@@ -161,3 +161,5 @@ D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\R.cs.flag
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\uploadflags.txt
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\bin\Debug\MySportsBook.dll.mdb
 D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\android\assets\MySportsBook.dll.mdb
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\enquiryuserfeedback_item.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable\feedbacklistitem.xml

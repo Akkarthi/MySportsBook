@@ -311,5 +311,67 @@ namespace MySportsBook
                 return null;
             }
         }
+
+        public void GetEnquiry(string token)
+        {
+            List<Player> playerList = new List<Player>();
+            string url = urlAddress + "api/enquiry";
+
+            try
+            {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+                using (var client = new HttpClient())
+                {
+                    if (!string.IsNullOrWhiteSpace(token))
+                    {
+                        client.DefaultRequestHeaders.Clear();
+                        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    }
+                    var response = client.GetAsync(url).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (result != null)
+                    {
+                        playerList = JsonConvert.DeserializeObject<List<Player>>(result);
+                    }
+                }
+
+                //return playerList;
+            }
+            catch (Exception e)
+            {
+                //return null;
+            }
+        }
+
+        public void GetEnquiryById(string token,string enquiryId)
+        {
+            List<Player> playerList = new List<Player>();
+            string url = urlAddress + "api/enquiry/"+ enquiryId;
+
+            try
+            {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+                using (var client = new HttpClient())
+                {
+                    if (!string.IsNullOrWhiteSpace(token))
+                    {
+                        client.DefaultRequestHeaders.Clear();
+                        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    }
+                    var response = client.GetAsync(url).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (result != null)
+                    {
+                        playerList = JsonConvert.DeserializeObject<List<Player>>(result);
+                    }
+                }
+
+                //return playerList;
+            }
+            catch (Exception e)
+            {
+                //return null;
+            }
+        }
     }
 }

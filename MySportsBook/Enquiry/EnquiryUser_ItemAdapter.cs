@@ -56,6 +56,7 @@ namespace MySportsBook
 
             var lblEnquiryUserName = view.FindViewById<TextView>(Resource.Id.lblEnquiryUserName);
             var lblEnquiryUserMobile = view.FindViewById<TextView>(Resource.Id.lblEnquiryUserMobile);
+            var llEnquiryUser= view.FindViewById<LinearLayout>(Resource.Id.llEnquiryUser);
 
             lblEnquiryUserName.Text = _items[position].FirstName;
             lblEnquiryUserMobile.Text = _items[position].Mobile;
@@ -63,12 +64,20 @@ namespace MySportsBook
             lblEnquiryUserName.SetTypeface(face, TypefaceStyle.Bold);
             lblEnquiryUserMobile.SetTypeface(face, TypefaceStyle.Bold);
 
+            
+            //var rlCourtItemMainContainer = (LinearLayout)view.FindViewById(Resource.Id.llCourt);
+            llEnquiryUser.Click += delegate
+            {
+
+                progress.Visibility = Android.Views.ViewStates.Visible;
+                new Thread(new ThreadStart(delegate
+                {
+                    context.RunOnUiThread(async () => { await LoadEnquiryUserDetails(position, commonDetails); progress.Visibility = Android.Views.ViewStates.Gone; });
+                })).Start();
 
 
-
-
-
-
+            };
+            
             return view;
         }
 
@@ -77,6 +86,20 @@ namespace MySportsBook
         {
             get { return _items.Count; }
         }
-
+        
+        public async Task LoadEnquiryUserDetails(int position, CommonDetails details)
+        {
+            if (helper.CheckInternetConnection(context))
+            {
+                var intent = new Intent(context, typeof(EnquiryUserDetailActivity));
+                intent.PutExtra("details", JsonConvert.SerializeObject(commonDetails));
+                context.StartActivity(intent);
+            }
+            else
+            {
+                helper.AlertPopUp("Warning", "Please enable mobile data", context);
+            }
+        }
+        
     }
 }

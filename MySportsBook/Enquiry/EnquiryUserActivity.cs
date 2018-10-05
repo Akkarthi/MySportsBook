@@ -57,9 +57,65 @@ namespace MySportsBook
                 {
                     List<EnquiryUser> enquiryUserList = new List<EnquiryUser>();
                     //courtList = serviceHelper.GetCourt(details.access_token, details.VenueId, details.SportId);
-
-
                     EnquiryUser enquiryUser;
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "Karthi";
+                    enquiryUser.Mobile = "97467664";
+                    enquiryUserList.Add(enquiryUser);
+
+
+                    enquiryUser = new EnquiryUser();
+                    enquiryUser.FirstName = "hanne";
+                    enquiryUser.Mobile = "243254542";
+                    enquiryUserList.Add(enquiryUser);
+                    
 
                     enquiryUser = new EnquiryUser();
                     enquiryUser.FirstName = "karthi";
@@ -67,11 +123,11 @@ namespace MySportsBook
                     enquiryUserList.Add(enquiryUser);
 
 
-                    //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
-                    //new Thread(new ThreadStart(delegate
-                    //{
-                    //    RunOnUiThread(async () => { await LoadCourt(); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
-                    //})).Start();
+                    linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+                    new Thread(new ThreadStart(delegate
+                    {
+                        RunOnUiThread(async () => { await LoadEnquiryList(commonDetails); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
+                    })).Start();
 
 
                     if (enquiryUserList != null && enquiryUserList.Count > 0)
@@ -132,6 +188,48 @@ namespace MySportsBook
             {
                 helper.AlertPopUp("Warning", "Please enable mobile data", this);
             }
+        }
+
+        private async Task LoadEnquiryList(CommonDetails details)
+        {
+            ServiceHelper serviceHelper = new ServiceHelper();
+            if (helper.CheckInternetConnection(this))
+            {
+                try
+                {
+                    serviceHelper.GetEnquiry(details.access_token);
+
+
+                    //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+                    //new Thread(new ThreadStart(delegate
+                    //{
+                    //    RunOnUiThread(async () => { await LoadCourt(); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
+                    //})).Start();
+
+
+                    //if (courtList != null && courtList.Count > 0)
+                    //{
+                    //    courtListView.SetAdapter(new Court_ItemAdapter(this, courtList, linearProgressBar, details));
+
+                    //}
+
+                    linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
+                }
+                catch (Exception e)
+                {
+                    helper.AlertPopUp("Error", "Unable to retrive data the server", this);
+                    linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
+                }
+            }
+            else
+            {
+                helper.AlertPopUp("Warning", "Please enable mobile data", this);
+                linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
+            }
+
+
+
+
         }
     }
 }
