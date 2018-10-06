@@ -77,7 +77,7 @@ namespace MySportsBook
                 imgPlayerUnChecked.Visibility = ViewStates.Visible;
             }
 
-            ImageClickListener imageClickListener = new ImageClickListener(position, this.context);
+            ImageClickListener imageClickListener = new ImageClickListener(_items[position].PlayerId, this.context);
             imgPlayerChecked.SetOnClickListener(imageClickListener);
             imgPlayerUnChecked.SetOnClickListener(imageClickListener);
             return view;
@@ -91,19 +91,19 @@ namespace MySportsBook
 
         private class ImageClickListener : Java.Lang.Object, View.IOnClickListener
         {
-            private PlayerPositionInterface playerPositionInterface;
-            private int position = 0;
+            private AttendanceAddPlayerInterface attendanceAddPlayerInterface;
+            private int playerId = 0;
             private Activity context;
-            public ImageClickListener(int _position, Activity activity)
+            public ImageClickListener(int _playerId, Activity activity)
             {
-                position = _position;
+                playerId = _playerId;
                 context = activity;
-                playerPositionInterface = (AttendanceAddPlayerActivity)this.context;
+                attendanceAddPlayerInterface = (AttendanceAddPlayerActivity)this.context;
             }
 
             public void OnClick(View v)
             {
-                playerPositionInterface.PlayerPosition(position);
+                attendanceAddPlayerInterface.AttendancePlayerById(playerId);
             }
         }
 

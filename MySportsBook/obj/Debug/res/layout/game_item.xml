@@ -1,0 +1,13 @@
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/rlGameItemMainContainer" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"><LinearLayout android:id="@+id/rlGameContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:fadingEdge="vertical" android:orientation="horizontal" android:clickable="true" android:layout_marginTop="@dimen/_5sdp" android:background="@drawable/userlistitemborder"><!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlBatchPlayerLeftImage"
+        android:gravity="left"
+        android:layout_centerVertical="true">
+      <ImageView
+          android:id="@+id/imgIcon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/userlisticon"
+          android:layout_alignParentLeft="true" />
+    </RelativeLayout>--><RelativeLayout android:id="@+id/rl_GameContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="5dp" android:layout_alignLeft="@+id/rlGameRightImage"><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_centerInParent="true" android:id="@+id/llGame"><TextView android:id="@+id/lblGameName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TExt viewwcenter1" android:textColor="#596370" android:textSize="@dimen/_12sdp" /></LinearLayout></RelativeLayout></LinearLayout><RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rlGameRightImage" android:gravity="right" android:layout_centerVertical="true"><ImageView android:id="@+id/imgGameUnchecked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/unchecked" android:layout_alignParentRight="true" android:layout_marginTop="@dimen/_5sdp" android:visibility="gone" /><ImageView android:id="@+id/imgGamechecked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/checked" android:layout_alignParentRight="true" android:visibility="gone" android:layout_marginTop="@dimen/_5sdp" /></RelativeLayout></RelativeLayout>

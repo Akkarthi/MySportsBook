@@ -23,6 +23,8 @@ namespace MySportsBook
         public string VenueName { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
+
+        public bool IsSelected { get; set; }
         //public  int ModifiedBy {
         //    get { return _ModifiedBy ?? 0; }
         //    set { _ModifiedBy = value; }

@@ -15,8 +15,8 @@ using Newtonsoft.Json;
 
 namespace MySportsBook
 {
-    [Activity(Label = "")]
-    public class AttendanceAddPlayerActivity : MenuActivity, PlayerPositionInterface
+    [Activity(Label = "", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, WindowSoftInputMode = SoftInput.StateHidden)]
+    public class AttendanceAddPlayerActivity : MenuActivity, AttendanceAddPlayerInterface
     {
         ListView attendancelistView;
         public static List<Player> _items;
@@ -27,6 +27,8 @@ namespace MySportsBook
         List<Player> playerList = new List<Player>();
         AttendanceAddPlayer_ItemAdapter attendanceAddPlayer_ItemAdapter;
         Button btnDone;
+        private EditText editTextSearchPlayer;
+        private TextView txtSearchPlayers;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,21 +40,38 @@ namespace MySportsBook
             lblHeader = FindViewById<TextView>(Resource.Id.lblheader);
             linearProgressBar = FindViewById<LinearLayout>(Resource.Id.linearProgressBar);
             btnDone = FindViewById<Button>(Resource.Id.btnDone);
+            txtSearchPlayers = FindViewById<TextView>(Resource.Id.txtSearchPlayers);
+            editTextSearchPlayer = FindViewById<EditText>(Resource.Id.editTextSearchPlayer);
 
             //for regular text getting Montserrat - Light.otf
             Typeface face = Typeface.CreateFromAsset(Application.Context.Assets, "fonts/zekton rg.ttf");
 
             lblHeader.SetTypeface(face, TypefaceStyle.Bold);
             btnDone.SetTypeface(face, TypefaceStyle.Bold);
+            txtSearchPlayers.SetTypeface(face, TypefaceStyle.Normal);
+            editTextSearchPlayer.SetTypeface(face, TypefaceStyle.Bold);
 
             btnDone.SetAllCaps(false);
 
             btnDone.Click += btnDone_Click;
+            editTextSearchPlayer.TextChanged += EditTextSearchPlayer_TextChanged;
 
 
             linearProgressBar.Visibility = ViewStates.Visible;
             new Thread(new ThreadStart(delegate { RunOnUiThread(async () => { await LoadAttendanceAddPlayer(commonDetails); }); }))
                 .Start();
+
+        }
+
+        private void EditTextSearchPlayer_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
+        {
+            List<Player> searchPlayerList=new List<Player>();
+            searchPlayerList = playerList.Where(x => x.FirstName.ToLower().Contains(editTextSearchPlayer.Text.ToLower()) || x.Mobile.ToLower().Contains(editTextSearchPlayer.Text.ToLower())).ToList();
+
+            attendanceAddPlayer_ItemAdapter =
+                new AttendanceAddPlayer_ItemAdapter(this, searchPlayerList, linearProgressBar);
+
+            attendancelistView.Adapter = attendanceAddPlayer_ItemAdapter;
 
         }
 
@@ -135,17 +154,24 @@ namespace MySportsBook
             }
         }
 
-        public void PlayerPosition(int position)
+        public void AttendancePlayerById(int playerId)
         {
-            if (playerList[position].IsAddedPlayerForAttendance)
+            var _player = playerList.Where(x => x.PlayerId == playerId).FirstOrDefault();
+            if (_player.IsAddedPlayerForAttendance)
             {
-                playerList[position].IsAddedPlayerForAttendance = false;
-                playerList[position].Present = false;
+                playerList.Where(x => x.PlayerId == _player.PlayerId).ToList()
+                    .ForEach(x => x.IsAddedPlayerForAttendance = false);
+                //playerList[position].IsAddedPlayerForAttendance = false;
+                //playerList[position].Present = false;
             }
             else
             {
-                playerList[position].IsAddedPlayerForAttendance = true;
-                playerList[position].Present = false;
+                playerList.Where(x => x.PlayerId == _player.PlayerId).ToList()
+                    .ForEach(x =>
+                    {
+                        x.IsAddedPlayerForAttendance = true;
+                        x.Present = false;
+                    });
             }
 
 

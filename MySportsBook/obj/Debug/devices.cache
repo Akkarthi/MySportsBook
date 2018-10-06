@@ -4,4 +4,8 @@
     <ResultingAbi>armeabi-v7a</ResultingAbi>
     <SdkVersion>21</SdkVersion>
   </Device>
+  <Device id="ZW2227SCWV">
+    <ResultingAbi>armeabi-v7a</ResultingAbi>
+    <SdkVersion>24</SdkVersion>
+  </Device>
 </Devices>

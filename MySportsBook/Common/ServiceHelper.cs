@@ -404,5 +404,48 @@ namespace MySportsBook
                 //return null;
             }
         }
+
+        public bool AddEnquiry(string token, Enquiry enquiry)
+        {
+            bool responseResult = false;
+            var json = JsonConvert.SerializeObject(enquiry);
+            var content = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
+            string url = urlAddress + "api/enquiry";
+            try
+            {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+                using (var client = new HttpClient())
+                {
+                    if (!string.IsNullOrWhiteSpace(token))
+                    {
+                        client.DefaultRequestHeaders.Clear();
+                        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    }
+                    var response = client.PostAsync(url, content).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (result != null)
+                    {
+                        if (response.IsSuccessStatusCode)
+                            responseResult = true;
+                        else
+                        {
+                            responseResult = false;
+                        }
+                    }
+                    else
+                    {
+                        responseResult = false;
+                    }
+                }
+
+                return responseResult;
+
+            }
+            catch (Exception e)
+            {
+                responseResult = false;
+                return responseResult;
+            }
+        }
     }
 }

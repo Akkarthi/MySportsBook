@@ -366,5 +366,11 @@ D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\obj\Debug\linksrc\M
 D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\obj\Debug\linksrc\MySportsBook.dll.mdb
 D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\bin\Debug\MySportsBook.dll.mdb
 D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\obj\Debug\android\assets\MySportsBook.dll.mdb
-D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\bin\Debug\MySportsBook.dll
-D:\AK\Project\Xamarin\MySportsBook\MySportsBook\MySportsBook\obj\Debug\linksrc\MySportsBook.dll.mdb
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-hdpi\addicon.png
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-mdpi\addicon.png
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xhdpi\addicon.png
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxhdpi\addicon.png
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\drawable-xxxhdpi\addicon.png
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\attendanceaddplayer.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\games.xml
+D:\PROJECT\Xamarin\MySportsBook\MySportsBook\obj\Debug\res\layout\game_item.xml

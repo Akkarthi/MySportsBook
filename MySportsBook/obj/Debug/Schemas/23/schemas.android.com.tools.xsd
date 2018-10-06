@@ -2,7 +2,7 @@
 <xs:schema xmlns:tools="http://schemas.android.com/tools" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/tools" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>10/5/2018 8:29:50 AM</xs:documentation>
+    <xs:documentation>10/6/2018 10:42:14 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="layout">
     <xs:annotation>
@@ -12,6 +12,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@layout/attendanceaddplayer" />
             <xs:enumeration value="@layout/batch" />
             <xs:enumeration value="@layout/batch_item" />
             <xs:enumeration value="@layout/batchcountupdatepopup" />
@@ -27,6 +28,8 @@
             <xs:enumeration value="@layout/enquiryuser_item" />
             <xs:enumeration value="@layout/enquiryuserdetail" />
             <xs:enumeration value="@layout/enquiryuserfeedback_item" />
+            <xs:enumeration value="@layout/game_item" />
+            <xs:enumeration value="@layout/games" />
             <xs:enumeration value="@layout/login" />
             <xs:enumeration value="@layout/main" />
             <xs:enumeration value="@layout/menu_drawer" />
@@ -82,6 +85,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@layout/attendanceaddplayer" />
             <xs:enumeration value="@layout/batch" />
             <xs:enumeration value="@layout/batch_item" />
             <xs:enumeration value="@layout/batchcountupdatepopup" />
@@ -97,6 +101,8 @@
             <xs:enumeration value="@layout/enquiryuser_item" />
             <xs:enumeration value="@layout/enquiryuserdetail" />
             <xs:enumeration value="@layout/enquiryuserfeedback_item" />
+            <xs:enumeration value="@layout/game_item" />
+            <xs:enumeration value="@layout/games" />
             <xs:enumeration value="@layout/login" />
             <xs:enumeration value="@layout/main" />
             <xs:enumeration value="@layout/menu_drawer" />
@@ -152,6 +158,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@layout/attendanceaddplayer" />
             <xs:enumeration value="@layout/batch" />
             <xs:enumeration value="@layout/batch_item" />
             <xs:enumeration value="@layout/batchcountupdatepopup" />
@@ -167,6 +174,8 @@
             <xs:enumeration value="@layout/enquiryuser_item" />
             <xs:enumeration value="@layout/enquiryuserdetail" />
             <xs:enumeration value="@layout/enquiryuserfeedback_item" />
+            <xs:enumeration value="@layout/game_item" />
+            <xs:enumeration value="@layout/games" />
             <xs:enumeration value="@layout/login" />
             <xs:enumeration value="@layout/main" />
             <xs:enumeration value="@layout/menu_drawer" />
@@ -222,6 +231,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@layout/attendanceaddplayer" />
             <xs:enumeration value="@layout/batch" />
             <xs:enumeration value="@layout/batch_item" />
             <xs:enumeration value="@layout/batchcountupdatepopup" />
@@ -237,6 +247,8 @@
             <xs:enumeration value="@layout/enquiryuser_item" />
             <xs:enumeration value="@layout/enquiryuserdetail" />
             <xs:enumeration value="@layout/enquiryuserfeedback_item" />
+            <xs:enumeration value="@layout/game_item" />
+            <xs:enumeration value="@layout/games" />
             <xs:enumeration value="@layout/login" />
             <xs:enumeration value="@layout/main" />
             <xs:enumeration value="@layout/menu_drawer" />

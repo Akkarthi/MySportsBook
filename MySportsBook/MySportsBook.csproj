@@ -88,6 +88,7 @@
     <Compile Include="Entity\BatchList.cs" />
     <Compile Include="Entity\CommonDetails.cs" />
     <Compile Include="Entity\Court.cs" />
+    <Compile Include="Entity\Enquiry.cs" />
     <Compile Include="Entity\EnquiryFeedback.cs" />
     <Compile Include="Entity\EnquiryUser.cs" />
     <Compile Include="Entity\Games.cs" />
@@ -96,9 +97,13 @@
     <Compile Include="Entity\Root.cs" />
     <Compile Include="Entity\Sport.cs" />
     <Compile Include="Entity\Venue.cs" />
+    <Compile Include="Games\EnquiryGamesInterface.cs" />
+    <Compile Include="Games\GamesActivity.cs" />
+    <Compile Include="Games\Game_ItemAdapter.cs" />
     <Compile Include="Login\LoginActivity.cs" />
     <Compile Include="MenuDrawer\MenuActivity.cs" />
     <Compile Include="Players\AttendanceAddPlayerActivity.cs" />
+    <Compile Include="Players\AttendanceAddPlayerInterface.cs" />
     <Compile Include="Players\AttendanceAddPlayer_ItemAdapter.cs" />
     <Compile Include="Players\BatchPlayer.cs" />
     <Compile Include="Players\BatchPlayer_ItemAdapter.cs" />
@@ -174,6 +179,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\enquiryuserfeedback_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Games.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\game_item.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -592,6 +603,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

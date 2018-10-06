@@ -59,12 +59,14 @@
                 android:id="@+id/editTextEnquiryName"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
-                android:text="Name"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
-                android:layout_marginBottom="@dimen/_5sdp" />
+                android:layout_marginBottom="@dimen/_5sdp" 
+              android:hint="Name"
+              android:textColorHint="#CCCCCC"/>
             <TextView
                 android:id="@+id/txtEnquiryMobile"
                 android:layout_width="wrap_content"
@@ -77,12 +79,14 @@
                 android:id="@+id/editTextEnquiryMobile"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
-                android:text="Mobile"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
-                android:layout_marginBottom="@dimen/_5sdp" />
+                android:layout_marginBottom="@dimen/_5sdp" 
+              android:hint="Mobile"
+              android:textColorHint="#CCCCCC"/>
             <TextView
                 android:id="@+id/txtEnquiryGame"
                 android:layout_width="wrap_content"
@@ -98,7 +102,20 @@
                 android:textColor="#000000"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
-                android:layout_marginBottom="@dimen/_5sdp" />
+                android:layout_marginBottom="@dimen/_5sdp" 
+              android:visibility="gone"/>
+          <EditText
+            android:id="@+id/editTextEnquiryGames"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/edittextboxborder"
+            android:paddingLeft="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:hint="Games"
+            android:textColorHint="#CCCCCC"/>
             <TextView
                 android:id="@+id/txtEnquiryComment"
                 android:layout_width="wrap_content"
@@ -111,13 +128,15 @@
                 android:id="@+id/editTextEnquiryComment"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
-                android:text="Game"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
                 android:gravity="top|left"
-                android:maxLines="6" />
+                android:maxLines="6" 
+              android:hint="Comments"
+             android:textColorHint="#CCCCCC"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/rlBottomButtonContainer"
