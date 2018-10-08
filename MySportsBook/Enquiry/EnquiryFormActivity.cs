@@ -13,7 +13,9 @@ using Newtonsoft.Json;
 using Android.Graphics;
 using System.Threading;
 using System.Threading.Tasks;
+using Android.Util;
 using Android.Views.InputMethods;
+using static Android.App.ActionBar;
 
 namespace MySportsBook
 {
@@ -35,6 +37,8 @@ namespace MySportsBook
         private TextView txtEnquiryMobile;
         private TextView txtEnquiryGame;
         private TextView txtEnquiryComment;
+        private LinearLayout llEnquiryFeedbackContainer;
+        private LinearLayout llEnquiryFeedback; 
 
         public override CommonDetails GetDetails()
         {
@@ -76,6 +80,8 @@ namespace MySportsBook
             txtEnquiryMobile = FindViewById<TextView>(Resource.Id.txtEnquiryMobile);
             txtEnquiryGame = FindViewById<TextView>(Resource.Id.txtEnquiryGame);
             txtEnquiryComment = FindViewById<TextView>(Resource.Id.txtEnquiryComment);
+            llEnquiryFeedbackContainer = FindViewById<LinearLayout>(Resource.Id.llEnquiryFeedbackContainer);
+            //llEnquiryFeedback = FindViewById<LinearLayout>(Resource.Id.llEnquiryFeedback);
 
 
             //for regular text getting Montserrat-Light.otf
@@ -103,8 +109,23 @@ namespace MySportsBook
             btnCancel.Click += btnCancel_Click;
             editTextEnquiryGames.Click += EditTextEnquiryGames_Click;
 
+            LinearLayout ll=new LinearLayout(this);
+            var param = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent,
+                ViewGroup.LayoutParams.WrapContent);
 
+            TextView commentTextView;
 
+            for (int i = 0; i < 2; i++)
+            {
+               commentTextView = new TextView(this) {Id = i};
+              
+                commentTextView.SetText("Comment1", TextView.BufferType.Normal);
+                commentTextView.SetTextSize(ComplexUnitType.Dip, 15);
+                commentTextView.SetTextColor(Color.ParseColor("#000000"));
+                ll.AddView(commentTextView, param);
+            }
+
+            llEnquiryFeedbackContainer.AddView(ll);
 
             //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
 
@@ -197,6 +218,8 @@ namespace MySportsBook
             if (helper.CheckInternetConnection(this))
             {
 
+                EnquiryModel enquiryModel=new EnquiryModel();
+
                 Enquiry enquiry = new Enquiry();
                 ServiceHelper serviceHelper = new ServiceHelper();
 
@@ -208,13 +231,25 @@ namespace MySportsBook
                 enquiry.FK_VenueId = Convert.ToInt32(commonDetails.VenueId);
                 enquiry.PK_EnquiryId = 0;
 
+                enquiryModel.Enquiry = enquiry;
+
+                List<Enquiry_Comments> enquiryCommentsList=new List<Enquiry_Comments>();
+                Enquiry_Comments enquiryComments=new Enquiry_Comments();
+
+                enquiryComments.Comments = "";
+
+                enquiryCommentsList.Add(enquiryComments);
+
+                enquiryModel.Enquiry_Comments = enquiryCommentsList;
+
+
                 try
                 {
                     new Thread(new ThreadStart(delegate
                     {
                         RunOnUiThread(async () =>
                         {
-                            await AddEnquiry(commonDetails.access_token, enquiry);
+                            await AddEnquiry(commonDetails.access_token, enquiryModel);
                             linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
                         });
                     })).Start();
@@ -234,7 +269,7 @@ namespace MySportsBook
 
         }
 
-        public async Task AddEnquiry(string token, Enquiry enquiry)
+        public async Task AddEnquiry(string token, EnquiryModel enquiryModel)
         {
             bool result = false;
             if (helper.CheckInternetConnection(this))
@@ -242,7 +277,7 @@ namespace MySportsBook
                 try
                 {
                     ServiceHelper serviceHelper = new ServiceHelper();
-                    result = serviceHelper.AddEnquiry(token, enquiry);
+                    result = serviceHelper.AddEnquiry(token, enquiryModel);
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
 
                     if (result)

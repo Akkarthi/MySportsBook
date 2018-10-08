@@ -16,17 +16,17 @@ using Newtonsoft.Json;
 
 namespace MySportsBook
 {
-    class EnquiryUser_ItemAdapter : BaseAdapter<EnquiryUser>
+    class EnquiryUser_ItemAdapter : BaseAdapter<EnquiryModel>
     {
 
         Activity context;
-        IList<EnquiryUser> _items;
+        IList<EnquiryModel> _items;
         bool ViewCourtFirstClick = true;
         private LinearLayout progress;
         private CommonDetails commonDetails;
         Helper helper = new Helper();
 
-        public EnquiryUser_ItemAdapter(Activity context, IList<EnquiryUser> items, LinearLayout progressbar, CommonDetails details) : base()
+        public EnquiryUser_ItemAdapter(Activity context, IList<EnquiryModel> items, LinearLayout progressbar, CommonDetails details) : base()
         {
             this.context = context;
             this._items = items;
@@ -34,7 +34,7 @@ namespace MySportsBook
             commonDetails = details;
         }
 
-        public override EnquiryUser this[int position]
+        public override EnquiryModel this[int position]
         {
             get { return _items[position]; }
         }
@@ -58,8 +58,8 @@ namespace MySportsBook
             var lblEnquiryUserMobile = view.FindViewById<TextView>(Resource.Id.lblEnquiryUserMobile);
             var llEnquiryUser= view.FindViewById<LinearLayout>(Resource.Id.llEnquiryUser);
 
-            lblEnquiryUserName.Text = _items[position].FirstName;
-            lblEnquiryUserMobile.Text = _items[position].Mobile;
+            lblEnquiryUserName.Text = _items[position].Enquiry.Name;
+            lblEnquiryUserMobile.Text = _items[position].Enquiry.Mobile;
 
             lblEnquiryUserName.SetTypeface(face, TypefaceStyle.Bold);
             lblEnquiryUserMobile.SetTypeface(face, TypefaceStyle.Bold);

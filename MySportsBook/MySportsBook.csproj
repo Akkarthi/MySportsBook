@@ -90,7 +90,9 @@
     <Compile Include="Entity\Court.cs" />
     <Compile Include="Entity\Enquiry.cs" />
     <Compile Include="Entity\EnquiryFeedback.cs" />
+    <Compile Include="Entity\EnquiryModel.cs" />
     <Compile Include="Entity\EnquiryUser.cs" />
+    <Compile Include="Entity\Enquiry_Comments.cs" />
     <Compile Include="Entity\Games.cs" />
     <Compile Include="Entity\Login.cs" />
     <Compile Include="Entity\Player.cs" />

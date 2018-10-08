@@ -31,20 +31,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="5dp"
-            android:layout_alignLeft="@+id/rlGameRightImage">
+            android:layout_alignLeft="@+id/rlGameRightImage"
+            android:gravity="left">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_30sdp"
                 android:orientation="vertical"
-                android:layout_centerInParent="true"
+                android:gravity="left"
                 android:id="@+id/llGame">
                 <TextView
                     android:id="@+id/lblGameName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="TExt viewwcenter1"
                     android:textColor="#596370"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_16sdp"
+                    android:gravity="center_vertical" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
@@ -60,8 +62,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/unchecked"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="@dimen/_5sdp"
-          android:visibility="gone"/>
+            android:layout_marginTop="@dimen/_4sdp"
+            android:visibility="gone" />
         <ImageView
             android:id="@+id/imgGamechecked"
             android:layout_width="wrap_content"
@@ -69,6 +71,6 @@
             android:background="@drawable/checked"
             android:layout_alignParentRight="true"
             android:visibility="gone"
-            android:layout_marginTop="@dimen/_5sdp" />
+            android:layout_marginTop="@dimen/_4sdp" />
     </RelativeLayout>
 </RelativeLayout>

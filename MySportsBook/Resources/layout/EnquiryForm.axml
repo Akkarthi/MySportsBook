@@ -64,9 +64,9 @@
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
-                android:layout_marginBottom="@dimen/_5sdp" 
-              android:hint="Name"
-              android:textColorHint="#CCCCCC"/>
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="Name"
+                android:textColorHint="#CCCCCC" />
             <TextView
                 android:id="@+id/txtEnquiryMobile"
                 android:layout_width="wrap_content"
@@ -84,9 +84,9 @@
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
-                android:layout_marginBottom="@dimen/_5sdp" 
-              android:hint="Mobile"
-              android:textColorHint="#CCCCCC"/>
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="Mobile"
+                android:textColorHint="#CCCCCC" />
             <TextView
                 android:id="@+id/txtEnquiryGame"
                 android:layout_width="wrap_content"
@@ -102,20 +102,20 @@
                 android:textColor="#000000"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/edittextboxborder"
-                android:layout_marginBottom="@dimen/_5sdp" 
-              android:visibility="gone"/>
-          <EditText
-            android:id="@+id/editTextEnquiryGames"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:text=""
-            android:textColor="#000000"
-            android:textSize="@dimen/_12sdp"
-            android:background="@drawable/edittextboxborder"
-            android:paddingLeft="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:hint="Games"
-            android:textColorHint="#CCCCCC"/>
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone" />
+            <EditText
+                android:id="@+id/editTextEnquiryGames"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                android:background="@drawable/edittextboxborder"
+                android:paddingLeft="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="Games"
+                android:textColorHint="#CCCCCC" />
             <TextView
                 android:id="@+id/txtEnquiryComment"
                 android:layout_width="wrap_content"
@@ -134,11 +134,46 @@
                 android:background="@drawable/edittextboxborder"
                 android:paddingLeft="@dimen/_3sdp"
                 android:gravity="top|left"
-                android:maxLines="6" 
-              android:hint="Comments"
-             android:textColorHint="#CCCCCC"/>
+                android:maxLines="6"
+                android:hint="Comments"
+                android:textColorHint="#CCCCCC" />
+          <LinearLayout
+            android:id="@+id/rlBottomButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_10sdp">
+            <Button
+              android:id="@+id/btnSubmit"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/buttonstyle"
+              android:text="Submit"
+              android:textSize="@dimen/_12sdp"
+              android:textColor="#FFFFFF"
+              android:layout_weight="1"
+              android:layout_marginRight="@dimen/_2sdp" />
+            <Button
+              android:id="@+id/btnCancel"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/buttonstyle"
+              android:text="Cancel"
+              android:textSize="@dimen/_12sdp"
+              android:textColor="#FFFFFF"
+              android:layout_weight="1" />
+          </LinearLayout>
+          <LinearLayout
+            android:id="@+id/llEnquiryFeedbackContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+           
+
+          </LinearLayout>
         </LinearLayout>
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/rlBottomButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,7 +199,7 @@
                 android:textSize="@dimen/_12sdp"
                 android:textColor="#FFFFFF"
                 android:layout_weight="1" />
-        </LinearLayout>
+        </LinearLayout>-->
         <LinearLayout
             android:id="@+id/linearProgressBar"
             android:layout_width="match_parent"

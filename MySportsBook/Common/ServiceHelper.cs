@@ -343,9 +343,9 @@ namespace MySportsBook
             }
         }
 
-        public void GetEnquiry(string token)
+        public List<EnquiryModel> GetEnquiry(string token)
         {
-            List<Player> playerList = new List<Player>();
+            List<EnquiryModel> enquiryModel = new List<EnquiryModel>();
             string url = urlAddress + "api/enquiry";
 
             try
@@ -362,15 +362,15 @@ namespace MySportsBook
                     var result = response.Content.ReadAsStringAsync().Result;
                     if (result != null)
                     {
-                        playerList = JsonConvert.DeserializeObject<List<Player>>(result);
+                        enquiryModel = JsonConvert.DeserializeObject<List<EnquiryModel>>(result);
                     }
                 }
 
-                //return playerList;
+                return enquiryModel;
             }
             catch (Exception e)
             {
-                //return null;
+                return null;
             }
         }
 
@@ -405,10 +405,10 @@ namespace MySportsBook
             }
         }
 
-        public bool AddEnquiry(string token, Enquiry enquiry)
+        public bool AddEnquiry(string token, EnquiryModel enquiryModel)
         {
             bool responseResult = false;
-            var json = JsonConvert.SerializeObject(enquiry);
+            var json = JsonConvert.SerializeObject(enquiryModel);
             var content = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
             string url = urlAddress + "api/enquiry";
             try

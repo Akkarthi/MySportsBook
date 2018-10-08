@@ -25,6 +25,7 @@ namespace MySportsBook
         private CommonDetails commonDetails;
         private string venueCode = string.Empty;
         Helper helper = new Helper();
+        List<EnquiryModel> enquiryModelList = new List<EnquiryModel>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -55,84 +56,84 @@ namespace MySportsBook
             {
                 try
                 {
-                    List<EnquiryUser> enquiryUserList = new List<EnquiryUser>();
+                    
                     //courtList = serviceHelper.GetCourt(details.access_token, details.VenueId, details.SportId);
-                    EnquiryUser enquiryUser;
+                    //EnquiryUser enquiryUser;
 
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
-
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "Karthi";
-                    enquiryUser.Mobile = "97467664";
-                    enquiryUserList.Add(enquiryUser);
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
 
 
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "hanne";
-                    enquiryUser.Mobile = "243254542";
-                    enquiryUserList.Add(enquiryUser);
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "Karthi";
+                    //enquiryUser.Mobile = "97467664";
+                    //enquiryUserList.Add(enquiryUser);
+
+
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "hanne";
+                    //enquiryUser.Mobile = "243254542";
+                    //enquiryUserList.Add(enquiryUser);
                     
 
-                    enquiryUser = new EnquiryUser();
-                    enquiryUser.FirstName = "karthi";
-                    enquiryUser.Mobile = "803894092840";
-                    enquiryUserList.Add(enquiryUser);
+                    //enquiryUser = new EnquiryUser();
+                    //enquiryUser.FirstName = "karthi";
+                    //enquiryUser.Mobile = "803894092840";
+                    //enquiryUserList.Add(enquiryUser);
 
 
-                    //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
-                    //new Thread(new ThreadStart(delegate
-                    //{
-                    //    RunOnUiThread(async () => { await LoadEnquiryList(commonDetails); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
-                    //})).Start();
-
-
-                    if (enquiryUserList != null && enquiryUserList.Count > 0)
+                    linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
+                    new Thread(new ThreadStart(delegate
                     {
-                        enquiryUserListView.SetAdapter(new EnquiryUser_ItemAdapter(this, enquiryUserList, linearProgressBar, details));
+                        RunOnUiThread(async () => { await LoadEnquiryList(commonDetails); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
+                    })).Start();
+
+
+                    if (enquiryModelList != null && enquiryModelList.Count > 0)
+                    {
+                        enquiryUserListView.SetAdapter(new EnquiryUser_ItemAdapter(this, enquiryModelList, linearProgressBar, details));
 
                     }
 
@@ -197,22 +198,8 @@ namespace MySportsBook
             {
                 try
                 {
-                    serviceHelper.GetEnquiry(details.access_token);
-
-
-                    //linearProgressBar.Visibility = Android.Views.ViewStates.Visible;
-                    //new Thread(new ThreadStart(delegate
-                    //{
-                    //    RunOnUiThread(async () => { await LoadCourt(); linearProgressBar.Visibility = Android.Views.ViewStates.Gone; });
-                    //})).Start();
-
-
-                    //if (courtList != null && courtList.Count > 0)
-                    //{
-                    //    courtListView.SetAdapter(new Court_ItemAdapter(this, courtList, linearProgressBar, details));
-
-                    //}
-
+                    enquiryModelList = serviceHelper.GetEnquiry(details.access_token);
+                    
                     linearProgressBar.Visibility = Android.Views.ViewStates.Gone;
                 }
                 catch (Exception e)
